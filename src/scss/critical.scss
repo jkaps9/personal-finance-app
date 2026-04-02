@@ -79,125 +79,17 @@ body {
 
 // Styles
 header {
-  position: relative;
-
-  .navbar {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    justify-content: space-between;
-  }
-
-  .logo {
-    max-height: 4rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    &__company-name {
-      font-size: 2rem;
-      font-weight: 900;
-    }
-
-    svg {
-      height: 4rem;
-      width: auto;
-    }
-  }
-
-  .navbar__buttons {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-  }
-
-  .nav-toggle {
-    background: none;
-    border: none;
-
-    svg * {
-      stroke: var(--text-color);
-      fill: var(--text-color);
-    }
-    svg.close {
-      visibility: hidden;
-      height: 0;
-      position: absolute;
-    }
-  }
-
-  &:has(.main-nav.visible) {
-    svg.close {
-      visibility: visible;
-      height: auto;
-      position: relative;
-    }
-    svg.hamburger {
-      visibility: hidden;
-      height: 0;
-      position: absolute;
-    }
-  }
-
-  .view-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-
-    svg {
-      height: 2rem;
-      width: 100%;
-    }
-
-    svg * {
-      stroke: var(--text-color);
-    }
-
-    svg.table {
-      visibility: hidden;
-      height: 0;
-      position: absolute;
-    }
-
-    svg.grid {
-      visibility: visible;
-      height: 2rem;
-      position: relative;
-    }
-  }
-
-  .navbar {
-    position: relative;
-    padding: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem) 0;
-  }
-
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   .main-nav {
-    visibility: hidden;
-    height: 0;
-    position: absolute;
-    font-size: 1.125rem;
-  }
-
-  .main-nav.visible {
-    background-color: var(--bg-secondary);
-    visibility: visible;
-    height: auto;
-    top: 100%;
-    right: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 2rem 1.5rem 1.5rem;
-    z-index: 1000;
-
+    padding: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem) 0;
     .nav__list {
       display: flex;
-      flex-direction: column;
       gap: 1.5rem;
+      justify-content: space-between;
       text-align: center;
     }
   }
