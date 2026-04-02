@@ -8,7 +8,7 @@
         <ul class="nav__list">
           {% for item in site.navigation %}
             <li class="nav__item {% if title === item.text %}active{% endif %}">
-              <a href="{{ item.url | url }}">{{ item.text }}</a>
+              <a href="{{ item.url | url }}">{% include item.img %}</a>
             </li>
           {% endfor %}
         </ul>
