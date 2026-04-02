@@ -81,40 +81,43 @@ body {
 header {
   position: fixed;
   bottom: 0;
+  border-top-right-radius: var(--spacing-xs);
+  border-top-left-radius: var(--spacing-xs);
   left: 0;
   right: 0;
   z-index: 1000;
   .main-nav {
-    padding: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem) 0;
+    padding: var(--spacing-xs) 0 0;
     .nav__list {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: space-between;
+      display: grid;
+      gap: var(--spacing-xs);
+      grid-template-columns: repeat(5, 1fr);
       text-align: center;
     }
   }
 
   .nav__item {
+    border-bottom: 3px solid transparent;
+    border-top-left-radius: var(--spacing-xs);
+    border-top-right-radius: var(--spacing-xs);
     position: relative;
+    padding: var(--spacing-sm) 0;
     a {
       text-decoration: none;
       color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 3px;
-      background-color: var(--accent-color);
-      bottom: -4px;
-      left: 0;
-      transition: width 0.3s;
-    }
-
-    &:hover::after,
-    &.active::after {
-      width: 100%;
+    &:hover,
+    &.active {
+      background-color: variables.$white;
+      border-bottom-color: var(--accent-color);
+      svg * {
+        fill: var(--accent-color);
+        stroke: var(--accent-color);
+      }
     }
   }
 }
