@@ -1,3 +1,5 @@
+@use "variables";
+
 .container {
   margin: 0 auto;
   max-width: var(--container-max-width);
@@ -42,5 +44,19 @@
 
   .stats__sublist {
     padding-left: 1rem;
+  }
+}
+
+.dark-bg {
+  background-color: variables.$grey-900;
+  color: variables.$white;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: variables.$grey-300;
   }
 }

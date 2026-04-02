@@ -271,3 +271,9 @@ footer {
     }
   }
 }
+
+main#overview {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
