@@ -2,6 +2,7 @@
 @use "reset";
 @use "sass:map";
 @use "utilities";
+@use "variables";
 
 :root {
   // COLORS
@@ -11,7 +12,7 @@
   --accent-color: #84cc16;
   --accent-hover: #65a30d;
 
-  --bg-color: #f1f1f1;
+  --bg-color: variables.$biege-100;
   --bg-secondary: #f9f9f9;
   --bg-tertiary: #f5f5f5;
 
@@ -20,7 +21,7 @@
   --text-muted: #666;
 
   --border-color: #e0e0e0;
-  --card-bg: #ffffff;
+  --card-bg: variables.$white;
   --footer-bg: #111;
   --cta-bg: #1a1a1a;
 
@@ -79,10 +80,6 @@ body {
 
 section {
   padding: var(--section-spacing) 0;
-}
-
-p {
-  color: var(--text-secondary);
 }
 
 // Styles
