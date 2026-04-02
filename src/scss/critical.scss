@@ -39,7 +39,6 @@
   --container-max-width: 70rem;
   --container-width: 90%;
 
-  --section-spacing: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
   --card-padding: 1.5rem 2rem;
   --card-width: 250px;
   --card-container-gap: 1rem;
@@ -76,10 +75,6 @@ body {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
-}
-
-section {
-  padding: var(--section-spacing) 0;
 }
 
 // Styles
