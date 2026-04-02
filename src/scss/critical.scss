@@ -1,6 +1,7 @@
 @use "fonts";
 @use "reset";
 @use "sass:map";
+@use "utilities";
 
 :root {
   // COLORS
@@ -82,54 +83,6 @@ section {
 
 p {
   color: var(--text-secondary);
-}
-
-// UTILITIES
-.container {
-  margin: 0 auto;
-  max-width: var(--container-max-width);
-  width: var(--container-width);
-}
-
-.accent-text {
-  color: var(--accent-color);
-}
-
-.btn--primary {
-  display: inline-block;
-  padding: 1em 2em;
-  text-decoration: none;
-  background-color: var(--accent-color);
-  color: var(--text-secondary);
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-
-  &:hover {
-    background-color: var(--accent-hover);
-  }
-}
-
-.card {
-  background-color: var(--card-bg);
-  border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: var(--card-padding);
-
-  &__title-row {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .stats__item {
-    .value {
-      color: var(--text-color);
-    }
-  }
-
-  .stats__sublist {
-    padding-left: 1rem;
-  }
 }
 
 // Styles
