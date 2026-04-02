@@ -49,7 +49,7 @@ export default function (config) {
 
   return {
     pathPrefix:
-      process.env.NODE_ENV === "production" ? "/valheim-wiki/" : "/",
+      process.env.NODE_ENV === "production" ? "/personal-finance-app/" : "/",
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     htmlTemplateEngine: "njk",

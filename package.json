@@ -1,25 +1,25 @@
 {
-  "name": "valheim-wiki",
+  "name": "personal-finance-app",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-ghpages": "npx @11ty/eleventy --pathprefix=/valheim-wiki/",
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/personal-finance-app/",
     "start": "npx eleventy --serve",
     "lint": "prettier --write ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jkaps9/valheim-wiki.git"
+    "url": "git+https://github.com/jkaps9/personal-finance-app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/jkaps9/valheim-wiki/issues"
+    "url": "https://github.com/jkaps9/personal-finance-app/issues"
   },
-  "homepage": "https://github.com/jkaps9/valheim-wiki#readme",
+  "homepage": "https://github.com/jkaps9/personal-finance-app#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^6.0.4",

@@ -1,50 +1,25 @@
 {
-  "name": "Valheim Wiki",
+  "name": "Finance",
   "navigation": [
     {
-      "text": "Food",
-      "url": "/food/"
+      "text": "Overview",
+      "url": "/overview/"
     },
     {
-      "text": "Biomes",
-      "url": "/biomes/"
+      "text": "Transaction",
+      "url": "/transaction/"
     },
     {
-      "text": "Weapons",
-      "url": "/weapons/"
+      "text": "Budgets",
+      "url": "/budgets/"
     },
     {
-      "text": "Armor",
-      "url": "/armor/"
+      "text": "Posts",
+      "url": "/posts/"
     },
     {
-      "text": "Creatures",
-      "url": "/creatures/"
-    },
-    {
-      "text": "Crafting",
-      "url": "/crafting/"
-    },
-    {
-      "text": "Building",
-      "url": "/building/"
-    }
-  ],
-  "services": [
-    {
-      "title": "Service 1",
-      "description": "A one to two sentence description of the service to help users understand",
-      "icon": "icon-brush.svg"
-    },
-    {
-      "title": "Service 2",
-      "description": "A one to two sentence description of the service to help users understand",
-      "icon": "icon-dinner-tray.svg"
-    },
-    {
-      "title": "Service 3",
-      "description": "A one to two sentence description of the service to help users understand",
-      "icon": "icon-calculator.svg"
+      "text": "Recurring Bills",
+      "url": "/recurring_bills/"
     }
   ]
 }
