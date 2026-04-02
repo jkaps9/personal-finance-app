@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>{{ site.name }} | {{ title }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ '/scss/critical.css' | url }}"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ '/assets/images/favicon.ico' | url }}"
+    />
+  </head>
+  <body>
+    {% include "partials/site-header.html" %}
+    <main>{% block content %}{% endblock %}</main>
+    {% include "partials/site-footer.html" %}
+    <script src="{{ '/main.js' | url }}"></script>
+    <!-- {% if title === "Blog" %}
+      <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    {% endif %} -->
+  </body>
+</html>

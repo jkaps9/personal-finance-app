@@ -1,0 +1,16 @@
+{
+  "printWidth": 80,
+  "htmlWhitespaceSensitivity": "ignore",
+  "bracketSameLine": false,
+  "singleAttributePerLine": true,
+
+  "plugins": ["prettier-plugin-jinja-template"],
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "jinja-template"
+      }
+    }
+  ]
+}

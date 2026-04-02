@@ -1,0 +1,33 @@
+{
+  "name": "valheim-wiki",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/valheim-wiki/",
+    "start": "npx eleventy --serve",
+    "lint": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkaps9/valheim-wiki.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/jkaps9/valheim-wiki/issues"
+  },
+  "homepage": "https://github.com/jkaps9/valheim-wiki#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@supabase/supabase-js": "^2.100.1",
+    "dotenv": "^17.3.1"
+  },
+  "devDependencies": {
+    "prettier-plugin-jinja-template": "^2.1.0",
+    "sass": "^1.93.2"
+  }
+}

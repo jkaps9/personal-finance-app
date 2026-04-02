@@ -1,0 +1,35 @@
+<header>
+  <div class="container">
+    <div class="navbar">
+      <a
+        href="{{ '/' | url }}"
+        class="logo"
+        aria-label="{{ site.name }} - home"
+      >
+        <p class="logo__company-name">Valheim Wiki</p>
+      </a>
+      <nav
+        class="main-nav"
+        aria-label="main"
+      >
+        <ul class="nav__list">
+          {% for item in site.navigation %}
+            <li class="nav__item {% if title === item.text %}active{% endif %}">
+              <a href="{{ item.url | url }}">{{ item.text }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="navbar__buttons">
+        <button class="view-toggle">
+          {% include "svgs/icon-grid.svg" %}
+          {% include "svgs/icon-table.svg" %}
+        </button>
+        <button class="nav-toggle">
+          {% include "svgs/icon-hamburger.svg" %}
+          {% include "svgs/icon-close.svg" %}
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

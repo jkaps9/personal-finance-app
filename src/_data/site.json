@@ -1,0 +1,50 @@
+{
+  "name": "Valheim Wiki",
+  "navigation": [
+    {
+      "text": "Food",
+      "url": "/food/"
+    },
+    {
+      "text": "Biomes",
+      "url": "/biomes/"
+    },
+    {
+      "text": "Weapons",
+      "url": "/weapons/"
+    },
+    {
+      "text": "Armor",
+      "url": "/armor/"
+    },
+    {
+      "text": "Creatures",
+      "url": "/creatures/"
+    },
+    {
+      "text": "Crafting",
+      "url": "/crafting/"
+    },
+    {
+      "text": "Building",
+      "url": "/building/"
+    }
+  ],
+  "services": [
+    {
+      "title": "Service 1",
+      "description": "A one to two sentence description of the service to help users understand",
+      "icon": "icon-brush.svg"
+    },
+    {
+      "title": "Service 2",
+      "description": "A one to two sentence description of the service to help users understand",
+      "icon": "icon-dinner-tray.svg"
+    },
+    {
+      "title": "Service 3",
+      "description": "A one to two sentence description of the service to help users understand",
+      "icon": "icon-calculator.svg"
+    }
+  ]
+}
