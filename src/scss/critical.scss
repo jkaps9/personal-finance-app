@@ -76,18 +76,19 @@ body {
     color 0.3s ease;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: var(--container-max-width);
-  width: var(--container-width);
-}
-
 section {
   padding: var(--section-spacing) 0;
 }
 
 p {
   color: var(--text-secondary);
+}
+
+// UTILITIES
+.container {
+  margin: 0 auto;
+  max-width: var(--container-max-width);
+  width: var(--container-width);
 }
 
 .accent-text {
@@ -131,84 +132,7 @@ p {
   }
 }
 
-// TABLES
-
-.table-section {
-  --section-spacing: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
-  h1 {
-    margin-bottom: 0.5em;
-  }
-}
-
-.table-container {
-  overflow-x: auto;
-}
-
-.data__table {
-  margin: 0 auto;
-  border: 1px solid var(--border-color);
-
-  th,
-  td {
-    padding: 0.6em;
-    border: 1px solid var(--border-color);
-  }
-
-  td[data-type="text"] {
-    text-align: start;
-  }
-
-  td[data-type="number"] {
-    text-align: right;
-  }
-
-  td[data-type="image"] {
-    text-align: center;
-
-    div {
-      width: 100%;
-
-      img {
-        margin: 0 auto;
-      }
-    }
-  }
-}
-
-// CARDS
-.card-section {
-  display: none;
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
-    gap: var(--card-container-gap);
-  }
-}
-
-body:has(main.grid) {
-  header {
-    svg.table {
-      visibility: visible;
-      height: 2rem;
-      position: relative;
-    }
-
-    svg.grid {
-      visibility: hidden;
-      height: 0;
-      position: absolute;
-    }
-  }
-
-  .card-section {
-    display: block;
-  }
-
-  .table-section {
-    display: none;
-  }
-}
-
+// Styles
 header {
   position: relative;
 
@@ -360,25 +284,6 @@ header {
 
 footer {
   text-align: center;
-}
-
-.foods {
-  &__fork {
-    height: 100%;
-    width: 2.5rem;
-    &.yellow svg * {
-      fill: var(--fork-yellow);
-    }
-    &.red svg * {
-      fill: var(--fork-red);
-    }
-    &.blue svg * {
-      fill: var(--fork-blue);
-    }
-    &.white svg * {
-      fill: var(--fork-white);
-    }
-  }
 }
 
 @media (min-width: 48rem) {
