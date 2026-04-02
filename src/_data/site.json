@@ -3,23 +3,28 @@
   "navigation": [
     {
       "text": "Overview",
-      "url": "/overview/"
+      "url": "/overview/",
+      "img": "svgs/icon-nav-overview.svg"
     },
     {
       "text": "Transaction",
-      "url": "/transaction/"
+      "url": "/transaction/",
+      "img": "svgs/icon-nav-overview.svg"
     },
     {
       "text": "Budgets",
-      "url": "/budgets/"
+      "url": "/budgets/",
+      "img": "svgs/icon-nav-budgets.svg"
     },
     {
-      "text": "Posts",
-      "url": "/posts/"
+      "text": "Pots",
+      "url": "/pots/",
+      "img": "svgs/icon-nav-pots.svg"
     },
     {
       "text": "Recurring Bills",
-      "url": "/recurring_bills/"
+      "url": "/recurring_bills/",
+      "img": "svgs/icon-nav-recurring-bills.svg"
     }
   ]
 }

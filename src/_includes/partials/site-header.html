@@ -1,13 +1,6 @@
 <header>
   <div class="container">
     <div class="navbar">
-      <a
-        href="{{ '/' | url }}"
-        class="logo"
-        aria-label="{{ site.name }} - home"
-      >
-        <p class="logo__company-name">finance</p>
-      </a>
       <nav
         class="main-nav"
         aria-label="main"
@@ -20,12 +13,7 @@
           {% endfor %}
         </ul>
       </nav>
-      <div class="navbar__buttons">
-        <button class="nav-toggle">
-          {% include "svgs/icon-hamburger.svg" %}
-          {% include "svgs/icon-close.svg" %}
-        </button>
-      </div>
+      <div class="navbar__buttons"></div>
     </div>
   </div>
 </header>
