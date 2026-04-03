@@ -236,6 +236,14 @@ main#overview {
   gap: var(--spacing-xxs);
   padding-left: var(--spacing-md);
 
+  p {
+    font-weight: 700;
+  }
+}
+
+.pot,
+.budget,
+.bill {
   // TODO make this an ::after element so I can put a border radius and overflow hidden to clip it out
   &[data-tag="green"] {
     border-left-color: variables.$green;
@@ -249,12 +257,7 @@ main#overview {
   &[data-tag="yellow"] {
     border-left-color: variables.$yellow;
   }
-
-  p {
-    font-weight: 700;
-  }
 }
-
 // OVERVIEW - TRANSACTIONS
 .overview-transactions {
   .card {
@@ -329,6 +332,37 @@ main#overview {
 
   .budgets-container {
     padding: var(--spacing-xs) 0;
+  }
+}
+
+.overview-recurring {
+  .card {
+    gap: var(--spacing-xxl);
+  }
+}
+
+.recurring-bills-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+
+  .bill {
+    align-items: center;
+    background-color: var(--bg-color);
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-radius: var(--spacing-xs);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-lg) var(--spacing-md);
+
+    h3 {
+      color: variables.$grey-500;
+    }
+
+    p {
+      font-weight: 700;
+    }
   }
 }
 
