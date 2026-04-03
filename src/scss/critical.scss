@@ -39,9 +39,7 @@
   --container-max-width: 70rem;
   --container-width: 90%;
 
-  --card-padding: 1.5rem 2rem;
-  --card-width: 250px;
-  --card-container-gap: 1rem;
+  --card-padding: var(--spacing-xxl) var(--spacing-lg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -91,6 +89,10 @@ h3 {
   @include fonts.textpreset4;
 }
 
+h4 {
+  @include fonts.textpreset5;
+}
+
 header {
   position: fixed;
   bottom: 0;
@@ -137,6 +139,21 @@ header {
 
 footer {
   text-align: center;
+}
+
+.pot,
+.pot__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.pot.total {
+  align-items: center;
+  background-color: variables.$biege-100;
+  flex-direction: row;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
 }
 
 @media (min-width: 48rem) {
