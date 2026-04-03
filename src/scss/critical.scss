@@ -10,23 +10,17 @@
   --primary-hover: #1e40af;
 
   --accent-color: #{variables.$green};
-  --accent-hover: #65a30d;
 
   --bg-color: #{variables.$biege-100};
+  --bg-color-medium: #{variables.$grey-500};
   --bg-color-dark: #{variables.$grey-900};
-  --bg-secondary: #f9f9f9;
-  --bg-tertiary: #f5f5f5;
 
   --text-color: #{variables.$grey-900};
   --text-color-light: #{variables.$white};
   --text-color-medium: #{variables.$grey-300};
-  --text-secondary: #555;
-  --text-muted: #666;
 
-  --border-color: #e0e0e0;
+  --border-color: #{variables.$biege-500};
   --card-bg: #{variables.$white};
-  --footer-bg: #111;
-  --cta-bg: #1a1a1a;
 
   // SPACING
   --spacing-xxs: 0.25rem;
@@ -52,23 +46,16 @@
 
     --bg-color: #{variables.$grey-900};
     --bg-color-dark: #{variables.$grey-100};
-    --bg-secondary: #1a1a1a;
-    --bg-tertiary: #262626;
 
     --text-color: #{variables.$grey-100};
     --text-color-light: #{variables.$grey-900};
     --text-color-medium: #{variables.$grey-500};
-    --text-secondary: #a3a3a3;
-    --text-muted: #737373;
 
-    --border-color: #333;
     --card-bg: #{variables.$grey-900};
-    --footer-bg: #000;
-    --cta-bg: #000;
   }
 
   .card {
-    border: 1px solid variables.$grey-500;
+    border: 1px solid var(--border-color);
   }
 }
 

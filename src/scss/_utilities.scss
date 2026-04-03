@@ -22,21 +22,21 @@
   text-decoration: none;
 
   &--primary {
-    background-color: variables.$grey-900;
-    color: variables.$white;
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-light);
 
     &:hover {
-      background-color: variables.$grey-500;
+      background-color: var(--bg-color-medium);
     }
   }
 
   &--secondary {
-    background-color: variables.$biege-100;
+    background-color: var(--bg-color);
     color: variables.$grey-900;
 
     &:hover {
       background-color: variables.$white;
-      border-color: variables.$biege-500;
+      border-color: var(--border-color);
     }
   }
 
