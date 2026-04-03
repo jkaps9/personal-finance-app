@@ -38,9 +38,40 @@
     }
 
     .transaction-list__image-and-title {
+      flex: 1;
       .transaction-list__category {
         display: none;
       }
+    }
+
+    .transaction-list__value-and-date {
+      .date {
+        display: none;
+      }
+    }
+
+    .transaction-list__item {
+      gap: var(--spacing-xxl);
+      & > *,
+      &.tranasction-list__header {
+        min-width: 88px;
+      }
+    }
+
+    .transaction-list__header,
+    .transaction-list__category,
+    .transaction-list__date {
+      @include fonts.textpreset5;
+      color: variables.$grey-500;
+    }
+
+    .transaction-list__header:first-child {
+      flex: 1;
+    }
+
+    .transaction-list__header:last-child {
+      align-self: flex-end;
+      text-align: end;
     }
   }
 }
