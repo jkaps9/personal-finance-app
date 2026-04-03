@@ -20,25 +20,30 @@
 
 @mixin textpreset1 {
   font-size: variables.$fs-text-preset-1;
+  font-weight: 700;
   line-height: 1.2;
 }
 
 @mixin textpreset2 {
   font-size: variables.$fs-text-preset-2;
+  font-weight: 700;
   line-height: 1.2;
 }
 
 @mixin textpreset3 {
   font-size: variables.$fs-text-preset-3;
+  font-weight: 700;
   line-height: 1.5;
 }
 
 @mixin textpreset4 {
   font-size: variables.$fs-text-preset-4;
+  font-weight: 400;
   line-height: 1.5;
 }
 
 @mixin textpreset5 {
   font-size: variables.$fs-text-preset-5;
+  font-weight: 400;
   line-height: 1.5;
 }

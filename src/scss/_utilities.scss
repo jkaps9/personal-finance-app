@@ -1,4 +1,5 @@
 @use "variables";
+@use "fonts";
 
 .container {
   margin: 0 auto;
@@ -65,4 +66,8 @@
   h6 {
     color: variables.$grey-300;
   }
+}
+
+.large-text {
+  @include fonts.textpreset1;
 }

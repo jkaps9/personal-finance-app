@@ -79,7 +79,18 @@ body {
     color 0.3s ease;
 }
 
-// Styles
+h1 {
+  @include fonts.textpreset1;
+}
+
+h2 {
+  @include fonts.textpreset2;
+}
+
+h3 {
+  @include fonts.textpreset4;
+}
+
 header {
   position: fixed;
   bottom: 0;
