@@ -291,6 +291,10 @@ main#overview {
       .logo {
         display: flex;
         padding: var(--spacing-xxxl) var(--spacing-xxl);
+
+        .small {
+          display: none;
+        }
       }
 
       .nav__list {
@@ -323,6 +327,22 @@ main#overview {
       a {
         flex-direction: row;
         gap: var(--spacing-md);
+      }
+    }
+
+    &.minimized {
+      .container {
+        min-width: 0;
+      }
+
+      .main-nav > .logo > .large,
+      .nav__item > a > span,
+      .nav__buttons > button > span {
+        display: none;
+      }
+
+      .main-nav > .logo > .small {
+        display: block;
       }
     }
   }

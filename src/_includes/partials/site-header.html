@@ -4,7 +4,10 @@
       class="main-nav"
       aria-label="main"
     >
-      <div class="logo">{% include "svgs/logo-large.svg" %}</div>
+      <div class="logo">
+        <div class="large">{% include "svgs/logo-large.svg" %}</div>
+        <div class="small">{% include "svgs/logo-small.svg" %}</div>
+      </div>
       <ul class="nav__list">
         {% for item in site.navigation %}
           <li class="nav__item {% if title === item.text %}active{% endif %}">
