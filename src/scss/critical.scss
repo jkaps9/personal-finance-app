@@ -353,6 +353,12 @@ main#overview {
   }
 }
 
+.transactions {
+  h1 {
+    margin-bottom: var(--spacing-xxl);
+  }
+}
+
 @media (min-width: 48rem) {
   :root {
     --card-padding: var(--spacing-xxl);
@@ -532,6 +538,12 @@ main#overview {
     margin: 0 auto;
     max-width: var(--container-max-width);
     padding: var(--spacing-xxl) var(--spacing-xxxl);
+    & > * {
+      .container {
+        margin: 0;
+        width: 100%;
+      }
+    }
   }
 
   main#overview {
@@ -543,13 +555,6 @@ main#overview {
 
     .overview {
       grid-column: 1 / -1;
-    }
-
-    & > * {
-      .container {
-        margin: 0;
-        width: 100%;
-      }
     }
 
     .left,
@@ -573,9 +578,5 @@ main#overview {
       flex: 1;
       gap: var(--spacing-md);
     }
-  }
-
-  main#transactions {
-    display: flex;
   }
 }
