@@ -378,11 +378,13 @@ main#overview .right {
   gap: var(--spacing-xl);
 }
 
-.overview-pots .card {
+.overview-pots .card,
+.overview-budgets .card {
   gap: var(--spacing-lg);
 }
 
-.pots-container {
+.pots-container,
+.budgets-container {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
@@ -402,32 +404,39 @@ main#overview .right {
   gap: var(--spacing-sm);
 }
 
-.pot-container {
+.pot-container,
+.budget-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: var(--spacing-md);
 }
 
-.pot {
+.pot,
+.budget {
   border-left: 4px solid #277c78;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xxs);
   padding-left: var(--spacing-md);
 }
-.pot[data-tag=green] {
+.pot[data-tag=green],
+.budget[data-tag=green] {
   border-left-color: #277c78;
 }
-.pot[data-tag=navy] {
+.pot[data-tag=navy],
+.budget[data-tag=navy] {
   border-left-color: #626070;
 }
-.pot[data-tag=cyan] {
+.pot[data-tag=cyan],
+.budget[data-tag=cyan] {
   border-left-color: #82c9d7;
 }
-.pot[data-tag=yellow] {
+.pot[data-tag=yellow],
+.budget[data-tag=yellow] {
   border-left-color: #f2cdac;
 }
-.pot p {
+.pot p,
+.budget p {
   font-weight: 700;
 }
 
@@ -479,6 +488,12 @@ main#overview .right {
   font-weight: 400;
   line-height: 1.5;
   color: #696868;
+}
+
+.overview-budgets .chart p {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 48rem) {

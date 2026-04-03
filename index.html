@@ -301,29 +301,52 @@
     <section class="overview-budgets">
   <div class="container">
     <div class="card">
-      <h2 class="section-title">Budgets</h2>
-      <div class="chart">
-        <p>
-          <span class="spent">$338</span>
-          of $875 limit
-        </p>
+      <div class="card__title-row">
+        <h2 class="section-title">Budgets</h2>
+        <a
+          href="/personal-finance-app/pots/"
+          class="btn--tertiary"
+        >
+          <span>See Details</span>
+          <svg fill="none" height="11" viewBox="0 0 6 11" width="6" xmlns="http://www.w3.org/2000/svg"><path d="m.853506.146465 5.000004 5.000005c.04648.04643.08336.10158.10853.16228.02516.06069.03811.12576.03811.19147 0 .0657-.01295.13077-.03811.19147-.02517.06069-.06205.11584-.10853.16228l-5.000004 5.00003c-.069927.07-.159054.1177-.256097.137-.097042.0193-.197637.0094-.289048-.0285-.091412-.0378-.16953-.102-.2244652-.1843-.0549354-.0823-.08421767-.179-.08413981-.278l-.00000043-9.999984c-.00007788-.098949.02920444-.195695.08413984-.277992.0549356-.082297.1330536-.1464431.2244646-.1843193.091412-.03787611.192007-.04777907.289049-.02845381.097042.01932521.186169.06700801.256097.13701411z" fill="#696868"/></svg>
+        </a>
       </div>
-      <div class="details">
-        <div class="detail detail-1">
-          <h3>Entertainment</h3>
-          <p>$50.00</p>
+      <div class="budgets-container">
+        <div class="chart">
+          <p>
+            <span class="large-text">$338</span>
+            of $875 limit
+          </p>
         </div>
-        <div class="detail detail-2">
-          <h3>Bills</h3>
-          <p>$750.00</p>
-        </div>
-        <div class="detail detail-3">
-          <h3>Personal Care</h3>
-          <p>$100.00</p>
-        </div>
-        <div class="detail detail-4">
-          <h3>Dining Out</h3>
-          <p>$75.00</p>
+        <div class="budget-container">
+          <div
+            class="budget budget-1"
+            data-tag="green"
+          >
+            <h3>Entertainment</h3>
+            <p>$50.00</p>
+          </div>
+          <div
+            class="budget budget-2"
+            data-tag="cyan"
+          >
+            <h3>Bills</h3>
+            <p>$750.00</p>
+          </div>
+          <div
+            class="budget budget-3"
+            data-tag="yellow"
+          >
+            <h3>Dining Out</h3>
+            <p>$75.00</p>
+          </div>
+          <div
+            class="budget budget-4"
+            data-tag="navy"
+          >
+            <h3>Personal Care</h3>
+            <p>$100.00</p>
+          </div>
         </div>
       </div>
     </div>
