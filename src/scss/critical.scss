@@ -305,6 +305,7 @@ main#overview {
 
         .small {
           width: 0;
+          height: 0;
           overflow: hidden;
         }
       }
@@ -350,12 +351,14 @@ main#overview {
       .main-nav > .logo > .large,
       .nav__item > a > span,
       .nav__buttons > button > span {
-        width: 0;
+        height: 0;
         overflow: hidden;
+        width: 0;
       }
 
       .main-nav > .logo > .small {
         width: auto;
+        height: auto;
       }
     }
   }
