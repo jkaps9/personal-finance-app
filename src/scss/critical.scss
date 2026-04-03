@@ -141,9 +141,21 @@ footer {
   text-align: center;
 }
 
+.overview-pots {
+  .card {
+    gap: var(--spacing-lg);
+  }
+}
+.pots-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
 .pot-total {
   align-items: center;
   background-color: variables.$biege-100;
+  border-radius: var(--spacing-sm);
   display: flex;
   gap: var(--spacing-md);
   padding: var(--spacing-md);
