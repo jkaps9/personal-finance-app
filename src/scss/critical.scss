@@ -126,7 +126,6 @@ header {
 
     a {
       align-items: center;
-      color: variables.$grey-900;
       display: flex;
       flex-direction: column;
       gap: var(--spacing-xxs);
@@ -225,8 +224,15 @@ main#overview {
   header {
     .nav__item {
       a {
+        color: variables.$grey-300;
         span {
           display: block;
+        }
+      }
+      &:hover,
+      &.active {
+        a {
+          color: variables.$grey-900;
         }
       }
     }
