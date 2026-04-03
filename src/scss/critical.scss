@@ -16,7 +16,7 @@
   --bg-secondary: #f9f9f9;
   --bg-tertiary: #f5f5f5;
 
-  --text-color: #333;
+  --text-color: #{variables.$grey-900};
   --text-secondary: #555;
   --text-muted: #666;
 
@@ -184,6 +184,7 @@ main#overview {
   }
 }
 
+// OVERVIEW - POTS
 .overview-pots {
   .card {
     gap: var(--spacing-lg);
@@ -240,6 +241,59 @@ main#overview {
 
   p {
     font-weight: 700;
+  }
+}
+
+// OVERVIEW - TRANSACTIONS
+.overview-transactions {
+  .card {
+    gap: var(--spacing-xxl);
+  }
+}
+
+.transaction-list {
+  display: grid;
+  gap: var(--spacing-lg);
+
+  &__image {
+    border-radius: 100vh;
+    max-height: 2rem;
+    max-width: 2rem;
+    overflow: hidden;
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__divider {
+    height: 1px;
+    background-color: variables.$grey-100;
+  }
+
+  &__description {
+    font-weight: 700;
+  }
+
+  &__details {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+
+    .amount {
+      font-weight: 700;
+      &.positive {
+        color: variables.$green;
+      }
+    }
+
+    .date {
+      @include fonts.textpreset5;
+      color: variables.$grey-500;
+    }
   }
 }
 
