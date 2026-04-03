@@ -97,8 +97,8 @@
 }
 
 .dark-bg {
-  background-color: variables.$grey-900;
-  color: variables.$white;
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-light);
 
   h1,
   h2,
@@ -106,7 +106,7 @@
   h4,
   h5,
   h6 {
-    color: variables.$grey-300;
+    color: var(--text-color-medium);
   }
 }
 
