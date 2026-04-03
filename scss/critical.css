@@ -419,25 +419,30 @@ main#overview .right {
   gap: var(--spacing-xxs);
   padding-left: var(--spacing-md);
 }
-.pot[data-tag=green],
-.budget[data-tag=green] {
-  border-left-color: #277c78;
-}
-.pot[data-tag=navy],
-.budget[data-tag=navy] {
-  border-left-color: #626070;
-}
-.pot[data-tag=cyan],
-.budget[data-tag=cyan] {
-  border-left-color: #82c9d7;
-}
-.pot[data-tag=yellow],
-.budget[data-tag=yellow] {
-  border-left-color: #f2cdac;
-}
 .pot p,
 .budget p {
   font-weight: 700;
+}
+
+.pot[data-tag=green],
+.budget[data-tag=green],
+.bill[data-tag=green] {
+  border-left-color: #277c78;
+}
+.pot[data-tag=navy],
+.budget[data-tag=navy],
+.bill[data-tag=navy] {
+  border-left-color: #626070;
+}
+.pot[data-tag=cyan],
+.budget[data-tag=cyan],
+.bill[data-tag=cyan] {
+  border-left-color: #82c9d7;
+}
+.pot[data-tag=yellow],
+.budget[data-tag=yellow],
+.bill[data-tag=yellow] {
+  border-left-color: #f2cdac;
 }
 
 .overview-transactions .card {
@@ -504,6 +509,32 @@ main#overview .right {
 }
 .overview-budgets .budgets-container {
   padding: var(--spacing-xs) 0;
+}
+
+.overview-recurring .card {
+  gap: var(--spacing-xxl);
+}
+
+.recurring-bills-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+.recurring-bills-container .bill {
+  align-items: center;
+  background-color: var(--bg-color);
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-radius: var(--spacing-xs);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+.recurring-bills-container .bill h3 {
+  color: #696868;
+}
+.recurring-bills-container .bill p {
+  font-weight: 700;
 }
 
 @media (min-width: 48rem) {
