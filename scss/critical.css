@@ -106,18 +106,56 @@ table {
   color: var(--accent-color);
 }
 
-.btn--primary {
-  display: inline-block;
-  padding: 1em 2em;
-  text-decoration: none;
-  background-color: var(--accent-color);
-  color: var(--text-secondary);
-  font-size: 1rem;
-  font-weight: 700;
+.btn {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  border-radius: var(--spacing-xs);
+  border: 1px solid transparent;
   cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  padding: var(--spacing-md);
+  text-decoration: none;
+}
+.btn--primary {
+  background-color: #201f24;
+  color: #ffffff;
 }
 .btn--primary:hover {
-  background-color: var(--accent-hover);
+  background-color: #696868;
+}
+.btn--secondary {
+  background-color: #f8f4f0;
+  color: #201f24;
+}
+.btn--secondary:hover {
+  background-color: #ffffff;
+  border-color: #98908b;
+}
+.btn--destroy {
+  background: #c94736;
+  color: #ffffff;
+}
+.btn--destroy:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), #c94736;
+}
+
+.btn--tertiary {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  align-items: center;
+  color: #696868;
+  display: inline-flex;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+}
+.btn--tertiary:hover {
+  color: #201f24;
+}
+.btn--tertiary:hover svg * {
+  fill: #201f24;
 }
 
 .card {
@@ -128,6 +166,11 @@ table {
   flex-direction: column;
   gap: var(--spacing-sm);
   padding: var(--card-padding);
+}
+.card__title-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-container {
@@ -286,19 +329,43 @@ footer {
   text-align: center;
 }
 
-.pot,
-.pot__text {
+.pot-total {
+  align-items: center;
+  background-color: #f8f4f0;
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+}
+.pot-total__text {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
 }
 
-.pot.total {
-  align-items: center;
-  background-color: #f8f4f0;
-  flex-direction: row;
-  gap: var(--spacing-md);
-  padding: var(--spacing-md);
+.pot-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: var(--spacing-md);
+}
+
+.pot {
+  border-left: 4px solid #277c78;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxs);
+  padding-left: var(--spacing-md);
+}
+.pot[data-tag=green] {
+  border-left-color: #277c78;
+}
+.pot[data-tag=navy] {
+  border-left-color: #626070;
+}
+.pot[data-tag=cyan] {
+  border-left-color: #82c9d7;
+}
+.pot[data-tag=yellow] {
+  border-left-color: #f2cdac;
 }
 
 @media (min-width: 48rem) {
