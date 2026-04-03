@@ -315,10 +315,15 @@ main#overview {
 
 .overview-budgets {
   .chart {
+    position: relative;
     p {
       align-items: center;
       display: flex;
       flex-direction: column;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
