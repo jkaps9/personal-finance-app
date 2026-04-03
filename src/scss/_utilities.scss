@@ -28,24 +28,12 @@
 
 .card {
   background-color: var(--card-bg);
-  border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: var(--spacing-sm);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
   padding: var(--card-padding);
-
-  &__title-row {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .stats__item {
-    .value {
-      color: var(--text-color);
-    }
-  }
-
-  .stats__sublist {
-    padding-left: 1rem;
-  }
 }
 
 .card-container {
