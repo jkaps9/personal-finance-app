@@ -183,8 +183,8 @@ table {
 }
 
 .dark-bg {
-  background-color: #201f24;
-  color: #ffffff;
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-light);
 }
 .dark-bg h1,
 .dark-bg h2,
@@ -192,7 +192,7 @@ table {
 .dark-bg h4,
 .dark-bg h5,
 .dark-bg h6 {
-  color: #b3b3b3;
+  color: var(--text-color-medium);
 }
 
 .large-text {
@@ -216,9 +216,12 @@ table {
   --accent-color: #277c78;
   --accent-hover: #65a30d;
   --bg-color: #f8f4f0;
+  --bg-color-dark: #201f24;
   --bg-secondary: #f9f9f9;
   --bg-tertiary: #f5f5f5;
   --text-color: #201f24;
+  --text-color-light: #ffffff;
+  --text-color-medium: #b3b3b3;
   --text-secondary: #555;
   --text-muted: #666;
   --border-color: #e0e0e0;
@@ -242,18 +245,22 @@ table {
   :root {
     --primary-color: #3b82f6;
     --primary-hover: #60a5fa;
-    --accent-color: #a3e635;
-    --accent-hover: #bef264;
-    --bg-color: #0f0f0f;
+    --bg-color: #201f24;
+    --bg-color-dark: #f2f2f2;
     --bg-secondary: #1a1a1a;
     --bg-tertiary: #262626;
-    --text-color: #e5e5e5;
+    --text-color: #f2f2f2;
+    --text-color-light: #201f24;
+    --text-color-medium: #696868;
     --text-secondary: #a3a3a3;
     --text-muted: #737373;
     --border-color: #333;
-    --card-bg: #1a1a1a;
+    --card-bg: #201f24;
     --footer-bg: #000;
     --cta-bg: #000;
+  }
+  .card {
+    border: 1px solid #696868;
   }
 }
 body {
@@ -383,7 +390,7 @@ main#overview .right {
 
 .pot-total {
   align-items: center;
-  background-color: #f8f4f0;
+  background-color: var(--bg-color);
   border-radius: var(--spacing-sm);
   display: flex;
   gap: var(--spacing-md);
