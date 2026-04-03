@@ -33,7 +33,7 @@
   --spacing-xxxl: 2.5rem;
 
   // CONTAINER
-  --container-max-width: 70rem;
+  --container-max-width: 90rem;
   --container-width: 90%;
 
   --card-padding: var(--spacing-xl) var(--spacing-lg);
@@ -527,11 +527,18 @@ main#overview {
     }
   }
 
+  main {
+    flex: 1;
+    margin: 0 auto;
+    max-width: var(--container-max-width);
+    padding: var(--spacing-xxl) var(--spacing-xxxl);
+  }
+
   main#overview {
     align-content: start;
     column-gap: var(--spacing-xl);
     grid-template-columns: 3fr 2fr;
-    padding: var(--spacing-xxl) var(--spacing-xxxl);
+
     row-gap: var(--spacing-xxl);
 
     .overview {
@@ -566,5 +573,9 @@ main#overview {
       flex: 1;
       gap: var(--spacing-md);
     }
+  }
+
+  main#transactions {
+    display: flex;
   }
 }
