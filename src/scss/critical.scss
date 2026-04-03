@@ -326,6 +326,10 @@ main#overview {
       transform: translate(-50%, -50%);
     }
   }
+
+  .budgets-container {
+    padding: var(--spacing-xs) 0;
+  }
 }
 
 @media (min-width: 48rem) {
@@ -353,10 +357,24 @@ main#overview {
   .overview .card {
     padding: var(--spacing-xl);
   }
+
   .pots-container {
     display: grid;
     grid-template-columns: 2fr 3fr;
     column-gap: var(--spacing-lg);
+  }
+
+  .budgets-container {
+    flex-direction: row;
+    .chart {
+      flex: 1;
+      max-width: 240px;
+      margin: 0 auto;
+    }
+  }
+
+  .budget-container {
+    grid-template-columns: 1fr;
   }
 }
 
