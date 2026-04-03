@@ -246,6 +246,8 @@ main#overview {
     padding: var(--spacing-xl);
   }
   .pots-container {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: var(--spacing-lg);
   }
 }
