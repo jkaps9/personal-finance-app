@@ -293,7 +293,8 @@ main#overview {
         padding: var(--spacing-xxxl) var(--spacing-xxl);
 
         .small {
-          display: none;
+          width: 0;
+          overflow: hidden;
         }
       }
 
@@ -338,11 +339,12 @@ main#overview {
       .main-nav > .logo > .large,
       .nav__item > a > span,
       .nav__buttons > button > span {
-        display: none;
+        width: 0;
+        overflow: hidden;
       }
 
       .main-nav > .logo > .small {
-        display: block;
+        width: auto;
       }
     }
   }
