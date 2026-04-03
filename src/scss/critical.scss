@@ -192,13 +192,15 @@ main#overview {
 }
 
 // OVERVIEW - POTS
-.overview-pots {
+.overview-pots,
+.overview-budgets {
   .card {
     gap: var(--spacing-lg);
   }
 }
 
-.pots-container {
+.pots-container,
+.budgets-container {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
@@ -307,6 +309,16 @@ main#overview {
     .date {
       @include fonts.textpreset5;
       color: variables.$grey-500;
+    }
+  }
+}
+
+.overview-budgets {
+  .chart {
+    p {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
     }
   }
 }
