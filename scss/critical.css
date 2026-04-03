@@ -695,8 +695,37 @@ main#overview .right {
     gap: var(--spacing-md);
   }
 }
+input,
+select {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid var(--border-color);
+  border-radius: var(--spacing-xs);
+  color: var(--text-color);
+  padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+select {
+  appearance: none;
+  background-image: url("../assets/images/icon-caret-down.svg");
+  background-repeat: no-repeat;
+  background-position: right var(--spacing-lg) center;
+  background-size: 16px;
+  padding-right: calc(2 * var(--spacing-lg));
+}
+
+.input-group {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
 .transactions h1 {
   margin-bottom: var(--spacing-xxl);
+}
+.transactions .card {
+  gap: var(--spacing-xl);
 }
 .transactions .transaction-list__item > .transaction-list__category,
 .transactions .transaction-list__item > .transaction-list__date,
@@ -712,6 +741,15 @@ main#overview .right {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
+}
+.transactions .input-row {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-xl);
+  justify-content: space-between;
+}
+.transactions .input-row #transaction-search {
+  flex: 1;
 }
 
 @media (min-width: 48rem) {
