@@ -168,48 +168,108 @@
     <section class="overview-transactions">
   <div class="container">
     <div class="card">
-      <h2 class="section-title">Transactions</h2>
+      <div class="card__title-row">
+        <h2 class="section-title">Transactions</h2>
+        <a
+          href="/personal-finance-app/transactions/"
+          class="btn--tertiary"
+        >
+          <span>View All</span>
+          <svg fill="none" height="11" viewBox="0 0 6 11" width="6" xmlns="http://www.w3.org/2000/svg"><path d="m.853506.146465 5.000004 5.000005c.04648.04643.08336.10158.10853.16228.02516.06069.03811.12576.03811.19147 0 .0657-.01295.13077-.03811.19147-.02517.06069-.06205.11584-.10853.16228l-5.000004 5.00003c-.069927.07-.159054.1177-.256097.137-.097042.0193-.197637.0094-.289048-.0285-.091412-.0378-.16953-.102-.2244652-.1843-.0549354-.0823-.08421767-.179-.08413981-.278l-.00000043-9.999984c-.00007788-.098949.02920444-.195695.08413984-.277992.0549356-.082297.1330536-.1464431.2244646-.1843193.091412-.03787611.192007-.04777907.289049-.02845381.097042.01932521.186169.06700801.256097.13701411z" fill="#696868"/></svg>
+        </a>
+      </div>
       <ul class="transaction-list">
-        <li class="transaction-list__item">
-          <div class="img"></div>
-          <p class="description">Emma Richardson</p>
-          <div class="right">
-            <p class="amount">+$75.50</p>
-            <p class="date">19 Aug 2024</p>
-          </div>
-        </li>
-        <li class="transaction-list__item">
-          <div class="img"></div>
-          <p class="description">Savory Bites Bistro</p>
-          <div class="right">
-            <p class="amount">-$55.50</p>
-            <p class="date">19 Aug 2024</p>
-          </div>
-        </li>
-        <li class="transaction-list__item">
-          <div class="img"></div>
-          <p class="description">Daniel Carter</p>
-          <div class="right">
-            <p class="amount">-$42.30</p>
-            <p class="date">18 Aug 2024</p>
-          </div>
-        </li>
-        <li class="transaction-list__item">
-          <div class="img"></div>
-          <p class="description">Sun Park</p>
-          <div class="right">
-            <p class="amount">+$120.00</p>
-            <p class="date">17 Aug 2024</p>
-          </div>
-        </li>
-        <li class="transaction-list__item">
-          <div class="img"></div>
-          <p class="description">Urban Services Hub</p>
-          <div class="right">
-            <p class="amount">-$65.00</p>
-            <p class="date">17 Aug 2024</p>
-          </div>
-        </li>
+        
+          <li class="transaction-list__item">
+            <div class="transaction-list__image">
+              <img
+                src="assets/images/avatars/emma-richardson.jpg"
+                alt="Emma Richardson avatar"
+              />
+            </div>
+            <p class="transaction-list__description">Emma Richardson</p>
+            <div class="transaction-list__details">
+              <p
+                class="amount positive"
+              >
+                +$75.50
+              </p>
+              <p class="date">Aug 19, 2024</p>
+            </div>
+          </li>
+        
+          <li class="transaction-list__item">
+            <div class="transaction-list__image">
+              <img
+                src="assets/images/avatars/savory-bites-bistro.jpg"
+                alt="Savory Bites Bistro avatar"
+              />
+            </div>
+            <p class="transaction-list__description">Savory Bites Bistro</p>
+            <div class="transaction-list__details">
+              <p
+                class="amount "
+              >
+                -$55.50
+              </p>
+              <p class="date">Aug 19, 2024</p>
+            </div>
+          </li>
+        
+          <li class="transaction-list__item">
+            <div class="transaction-list__image">
+              <img
+                src="assets/images/avatars/daniel-carter.jpg"
+                alt="Daniel Carter avatar"
+              />
+            </div>
+            <p class="transaction-list__description">Daniel Carter</p>
+            <div class="transaction-list__details">
+              <p
+                class="amount "
+              >
+                -$42.30
+              </p>
+              <p class="date">Aug 18, 2024</p>
+            </div>
+          </li>
+        
+          <li class="transaction-list__item">
+            <div class="transaction-list__image">
+              <img
+                src="assets/images/avatars/sun-park.jpg"
+                alt="Sun Park avatar"
+              />
+            </div>
+            <p class="transaction-list__description">Sun Park</p>
+            <div class="transaction-list__details">
+              <p
+                class="amount positive"
+              >
+                +$120.00
+              </p>
+              <p class="date">Aug 17, 2024</p>
+            </div>
+          </li>
+        
+          <li class="transaction-list__item">
+            <div class="transaction-list__image">
+              <img
+                src="assets/images/avatars/urban-services-hub.jpg"
+                alt="Urban Services Hub avatar"
+              />
+            </div>
+            <p class="transaction-list__description">Urban Services Hub</p>
+            <div class="transaction-list__details">
+              <p
+                class="amount "
+              >
+                -$65.00
+              </p>
+              <p class="date">Aug 17, 2024</p>
+            </div>
+          </li>
+        
       </ul>
     </div>
   </div>

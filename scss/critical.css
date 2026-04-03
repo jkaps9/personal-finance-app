@@ -218,7 +218,7 @@ table {
   --bg-color: #f8f4f0;
   --bg-secondary: #f9f9f9;
   --bg-tertiary: #f5f5f5;
-  --text-color: #333;
+  --text-color: #201f24;
   --text-secondary: #555;
   --text-muted: #666;
   --border-color: #e0e0e0;
@@ -235,7 +235,7 @@ table {
   --spacing-xxxl: 2.5rem;
   --container-max-width: 70rem;
   --container-width: 90%;
-  --card-padding: var(--spacing-xxl) var(--spacing-lg);
+  --card-padding: var(--spacing-xl) var(--spacing-lg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -359,6 +359,18 @@ footer {
   text-align: center;
 }
 
+main#overview {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+main#overview .left,
+main#overview .right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
 .overview-pots .card {
   gap: var(--spacing-lg);
 }
@@ -412,19 +424,55 @@ footer {
   font-weight: 700;
 }
 
-main#overview {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-xl);
+.overview-transactions .card {
+  gap: var(--spacing-xxl);
 }
-main#overview .left,
-main#overview .right {
+
+.transaction-list {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+.transaction-list__image {
+  border-radius: 100vh;
+  max-height: 2rem;
+  max-width: 2rem;
+  overflow: hidden;
+}
+.transaction-list__item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.transaction-list__divider {
+  height: 1px;
+  background-color: #f2f2f2;
+}
+.transaction-list__description {
+  font-weight: 700;
+}
+.transaction-list__details {
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-xs);
+}
+.transaction-list__details .amount {
+  font-weight: 700;
+}
+.transaction-list__details .amount.positive {
+  color: #277c78;
+}
+.transaction-list__details .date {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #696868;
 }
 
 @media (min-width: 48rem) {
+  :root {
+    --card-padding: var(--spacing-xxl);
+  }
   header .nav__item a {
     color: #b3b3b3;
   }
