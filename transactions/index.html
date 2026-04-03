@@ -32,7 +32,7 @@
       <ul class="nav__list">
         
           <li class="nav__item ">
-            <a href="/personal-finance-app/overview/">
+            <a href="/personal-finance-app/">
               <svg fill="none" height="19" viewBox="0 0 18 19" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m18 8.59282v8.66718c0 .3978-.158.7794-.4393 1.0607s-.6629.4393-1.0607.4393h-3.75c-.3978 0-.7794-.158-1.0607-.4393s-.4393-.6629-.4393-1.0607v-3.75c0-.1989-.079-.3897-.2197-.5303-.1406-.1407-.3314-.2197-.5303-.2197h-3c-.19891 0-.38968.079-.53033.2197-.14065.1406-.21967.3314-.21967.5303v3.75c0 .3978-.15804.7794-.43934 1.0607s-.66284.4393-1.06066.4393h-3.75c-.39782 0-.779356-.158-1.06066-.4393-.281305-.2813-.43933998-.6629-.43933998-1.0607v-8.66718c-.00003156-.20761.04303048-.41295.12646098-.60305.08343-.1901.205412-.36081.358226-.50133l7.500003-7.07625.01031-.010313c.27613-.251125.63597-.3902803 1.00922-.3902803s.73308.1391553 1.00918.3902803c.0032.003669.0067.007114.0103.010313l7.5 7.07625c.1513.14126.2717.3123.3537.50237.082.19006.1237.39503.1226.60201z" fill="#b3b3b3"/></svg>
               <span>Overview</span>
             </a>
@@ -82,15 +82,385 @@
 </header>
 
     <main id="transactions">
-  Overview Transactions Budgets Pots Recurring Bills Minimize Menu Search
-  transactions Sort by Latest Oldest A to Z Z to A Highest Lowest Category All
-  Transactions Entertainment Bills Groceries Dining Out Transportation Personal
-  Care Education Lifestyle Shopping General Recipient/Sender Category
-  Transaction Date Amount
+  <section class="transactions">
+    <div class="container">
+      <h1>Transactions</h1>
+      <div class="card">
+        <div class="input-row">
+          <input type="text" />
+        </div>
 
-  <!-- Add transaction data -->
-
-  Prev Next
+        <ul class="transaction-list">
+          <li class="transaction-list__headers transaction-list__item">
+            <p class="transaction-list__header">Recipient / Sender</p>
+            <p class="transaction-list__header">Category</p>
+            <p class="transaction-list__header">Date</p>
+            <p class="transaction-list__header">Amount</p>
+          </li>
+          <li class="transaction-list__divider first-divider"></li>
+          
+            <li class="transaction-list__item">
+              <div class="transaction-list__image-and-title">
+                <div class="transaction-list__image">
+                  <img
+                    src="../assets/images/avatars/emma-richardson.jpg"
+                    alt="Emma Richardson avatar"
+                  />
+                </div>
+                <div class="text">
+                  <p class="transaction-list__description">
+                    Emma Richardson
+                  </p>
+                  <p class="transaction-list__category">
+                    General
+                  </p>
+                </div>
+              </div>
+              <p class="transaction-list__category">
+                General
+              </p>
+              <p class="transaction-list__date date">
+                Aug 19, 2024
+              </p>
+              <div class="transaction-list__value-and-date">
+                <p
+                  class="value positive"
+                >
+                  +$75.50
+                </p>
+                <p class="date">Aug 19, 2024</p>
+              </div>
+            </li>
+            
+              <li class="transaction-list__divider"></li>
+            
+          
+            <li class="transaction-list__item">
+              <div class="transaction-list__image-and-title">
+                <div class="transaction-list__image">
+                  <img
+                    src="../assets/images/avatars/savory-bites-bistro.jpg"
+                    alt="Savory Bites Bistro avatar"
+                  />
+                </div>
+                <div class="text">
+                  <p class="transaction-list__description">
+                    Savory Bites Bistro
+                  </p>
+                  <p class="transaction-list__category">
+                    Dining Out
+                  </p>
+                </div>
+              </div>
+              <p class="transaction-list__category">
+                Dining Out
+              </p>
+              <p class="transaction-list__date date">
+                Aug 19, 2024
+              </p>
+              <div class="transaction-list__value-and-date">
+                <p
+                  class="value "
+                >
+                  -$55.50
+                </p>
+                <p class="date">Aug 19, 2024</p>
+              </div>
+            </li>
+            
+              <li class="transaction-list__divider"></li>
+            
+          
+            <li class="transaction-list__item">
+              <div class="transaction-list__image-and-title">
+                <div class="transaction-list__image">
+                  <img
+                    src="../assets/images/avatars/daniel-carter.jpg"
+                    alt="Daniel Carter avatar"
+                  />
+                </div>
+                <div class="text">
+                  <p class="transaction-list__description">
+                    Daniel Carter
+                  </p>
+                  <p class="transaction-list__category">
+                    General
+                  </p>
+                </div>
+              </div>
+              <p class="transaction-list__category">
+                General
+              </p>
+              <p class="transaction-list__date date">
+                Aug 18, 2024
+              </p>
+              <div class="transaction-list__value-and-date">
+                <p
+                  class="value "
+                >
+                  -$42.30
+                </p>
+                <p class="date">Aug 18, 2024</p>
+              </div>
+            </li>
+            
+              <li class="transaction-list__divider"></li>
+            
+          
+            <li class="transaction-list__item">
+              <div class="transaction-list__image-and-title">
+                <div class="transaction-list__image">
+                  <img
+                    src="../assets/images/avatars/sun-park.jpg"
+                    alt="Sun Park avatar"
+                  />
+                </div>
+                <div class="text">
+                  <p class="transaction-list__description">
+                    Sun Park
+                  </p>
+                  <p class="transaction-list__category">
+                    General
+                  </p>
+                </div>
+              </div>
+              <p class="transaction-list__category">
+                General
+              </p>
+              <p class="transaction-list__date date">
+                Aug 17, 2024
+              </p>
+              <div class="transaction-list__value-and-date">
+                <p
+                  class="value positive"
+                >
+                  +$120.00
+                </p>
+                <p class="date">Aug 17, 2024</p>
+              </div>
+            </li>
+            
+              <li class="transaction-list__divider"></li>
+            
+          
+            <li class="transaction-list__item">
+              <div class="transaction-list__image-and-title">
+                <div class="transaction-list__image">
+                  <img
+                    src="../assets/images/avatars/urban-services-hub.jpg"
+                    alt="Urban Services Hub avatar"
+                  />
+                </div>
+                <div class="text">
+                  <p class="transaction-list__description">
+                    Urban Services Hub
+                  </p>
+                  <p class="transaction-list__category">
+                    General
+                  </p>
+                </div>
+              </div>
+              <p class="transaction-list__category">
+                General
+              </p>
+              <p class="transaction-list__date date">
+                Aug 17, 2024
+              </p>
+              <div class="transaction-list__value-and-date">
+                <p
+                  class="value "
+                >
+                  -$65.00
+                </p>
+                <p class="date">Aug 17, 2024</p>
+              </div>
+            </li>
+            
+              <li class="transaction-list__divider"></li>
+            
+          
+            <li class="transaction-list__item">
+              <div class="transaction-list__image-and-title">
+                <div class="transaction-list__image">
+                  <img
+                    src="../assets/images/avatars/liam-hughes.jpg"
+                    alt="Liam Hughes avatar"
+                  />
+                </div>
+                <div class="text">
+                  <p class="transaction-list__description">
+                    Liam Hughes
+                  </p>
+                  <p class="transaction-list__category">
+                    Groceries
+                  </p>
+                </div>
+              </div>
+              <p class="transaction-list__category">
+                Groceries
+              </p>
+              <p class="transaction-list__date date">
+                Aug 15, 2024
+              </p>
+              <div class="transaction-list__value-and-date">
+                <p
+                  class="value positive"
+                >
+                  +$65.75
+                </p>
+                <p class="date">Aug 15, 2024</p>
+              </div>
+            </li>
+            
+              <li class="transaction-list__divider"></li>
+            
+          
+            <li class="transaction-list__item">
+              <div class="transaction-list__image-and-title">
+                <div class="transaction-list__image">
+                  <img
+                    src="../assets/images/avatars/lily-ramirez.jpg"
+                    alt="Lily Ramirez avatar"
+                  />
+                </div>
+                <div class="text">
+                  <p class="transaction-list__description">
+                    Lily Ramirez
+                  </p>
+                  <p class="transaction-list__category">
+                    General
+                  </p>
+                </div>
+              </div>
+              <p class="transaction-list__category">
+                General
+              </p>
+              <p class="transaction-list__date date">
+                Aug 14, 2024
+              </p>
+              <div class="transaction-list__value-and-date">
+                <p
+                  class="value positive"
+                >
+                  +$50.00
+                </p>
+                <p class="date">Aug 14, 2024</p>
+              </div>
+            </li>
+            
+              <li class="transaction-list__divider"></li>
+            
+          
+            <li class="transaction-list__item">
+              <div class="transaction-list__image-and-title">
+                <div class="transaction-list__image">
+                  <img
+                    src="../assets/images/avatars/ethan-clark.jpg"
+                    alt="Ethan Clark avatar"
+                  />
+                </div>
+                <div class="text">
+                  <p class="transaction-list__description">
+                    Ethan Clark
+                  </p>
+                  <p class="transaction-list__category">
+                    Dining Out
+                  </p>
+                </div>
+              </div>
+              <p class="transaction-list__category">
+                Dining Out
+              </p>
+              <p class="transaction-list__date date">
+                Aug 13, 2024
+              </p>
+              <div class="transaction-list__value-and-date">
+                <p
+                  class="value "
+                >
+                  -$32.50
+                </p>
+                <p class="date">Aug 13, 2024</p>
+              </div>
+            </li>
+            
+              <li class="transaction-list__divider"></li>
+            
+          
+            <li class="transaction-list__item">
+              <div class="transaction-list__image-and-title">
+                <div class="transaction-list__image">
+                  <img
+                    src="../assets/images/avatars/james-thompson.jpg"
+                    alt="James Thompson avatar"
+                  />
+                </div>
+                <div class="text">
+                  <p class="transaction-list__description">
+                    James Thompson
+                  </p>
+                  <p class="transaction-list__category">
+                    Entertainment
+                  </p>
+                </div>
+              </div>
+              <p class="transaction-list__category">
+                Entertainment
+              </p>
+              <p class="transaction-list__date date">
+                Aug 11, 2024
+              </p>
+              <div class="transaction-list__value-and-date">
+                <p
+                  class="value "
+                >
+                  -$5.00
+                </p>
+                <p class="date">Aug 11, 2024</p>
+              </div>
+            </li>
+            
+              <li class="transaction-list__divider"></li>
+            
+          
+            <li class="transaction-list__item">
+              <div class="transaction-list__image-and-title">
+                <div class="transaction-list__image">
+                  <img
+                    src="../assets/images/avatars/pixel-playground.jpg"
+                    alt="Pixel Playground avatar"
+                  />
+                </div>
+                <div class="text">
+                  <p class="transaction-list__description">
+                    Pixel Playground
+                  </p>
+                  <p class="transaction-list__category">
+                    Entertainment
+                  </p>
+                </div>
+              </div>
+              <p class="transaction-list__category">
+                Entertainment
+              </p>
+              <p class="transaction-list__date date">
+                Aug 11, 2024
+              </p>
+              <div class="transaction-list__value-and-date">
+                <p
+                  class="value "
+                >
+                  -$10.00
+                </p>
+                <p class="date">Aug 11, 2024</p>
+              </div>
+            </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+  </section>
 </main>
     <script src="/personal-finance-app/main.js"></script>
   </body>

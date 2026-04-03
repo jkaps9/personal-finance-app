@@ -230,7 +230,7 @@ table {
   --spacing-xl: 1.5rem;
   --spacing-xxl: 2rem;
   --spacing-xxxl: 2.5rem;
-  --container-max-width: 70rem;
+  --container-max-width: 90rem;
   --container-width: 90%;
   --card-padding: var(--spacing-xl) var(--spacing-lg);
 }
@@ -656,19 +656,24 @@ main#overview .right {
   header.minimized #minimize-btn svg {
     transform: rotateZ(180deg);
   }
+  main {
+    flex: 1;
+    margin: 0 auto;
+    max-width: var(--container-max-width);
+    padding: var(--spacing-xxl) var(--spacing-xxxl);
+  }
+  main > * .container {
+    margin: 0;
+    width: 100%;
+  }
   main#overview {
     align-content: start;
     column-gap: var(--spacing-xl);
     grid-template-columns: 3fr 2fr;
-    padding: var(--spacing-xxl) var(--spacing-xxxl);
     row-gap: var(--spacing-xxl);
   }
   main#overview .overview {
     grid-column: 1/-1;
-  }
-  main#overview > * .container {
-    margin: 0;
-    width: 100%;
   }
   main#overview .left,
   main#overview .right {
@@ -688,5 +693,62 @@ main#overview .right {
     align-items: center;
     flex: 1;
     gap: var(--spacing-md);
+  }
+}
+.transactions h1 {
+  margin-bottom: var(--spacing-xxl);
+}
+.transactions .transaction-list__item > .transaction-list__category,
+.transactions .transaction-list__item > .transaction-list__date,
+.transactions .transaction-list__headers,
+.transactions .transaction-list__divider.first-divider {
+  display: none;
+}
+.transactions .transaction-list__category {
+  font-weight: 400;
+}
+.transactions .transaction-list__image-and-title .text {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+@media (min-width: 48rem) {
+  .transactions .transaction-list__item > .transaction-list__category,
+  .transactions .transaction-list__item > .transaction-list__date,
+  .transactions .transaction-list__headers,
+  .transactions .transaction-list__divider.first-divider {
+    display: flex;
+  }
+  .transactions .transaction-list__image-and-title {
+    flex: 1;
+  }
+  .transactions .transaction-list__image-and-title .transaction-list__category {
+    display: none;
+  }
+  .transactions .transaction-list__value-and-date .date {
+    display: none;
+  }
+  .transactions .transaction-list__item {
+    gap: var(--spacing-xxl);
+  }
+  .transactions .transaction-list__item > *, .transactions .transaction-list__item.tranasction-list__header {
+    min-width: 88px;
+  }
+  .transactions .transaction-list__header,
+  .transactions .transaction-list__category,
+  .transactions .transaction-list__date {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #696868;
+  }
+  .transactions .transaction-list__header:first-child {
+    flex: 1;
+  }
+  .transactions .transaction-list__header:last-child {
+    align-self: flex-end;
+    text-align: end;
   }
 }
