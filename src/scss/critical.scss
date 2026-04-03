@@ -9,10 +9,10 @@
   --primary-color: #1e3a8a;
   --primary-hover: #1e40af;
 
-  --accent-color: #84cc16;
+  --accent-color: #{variables.$green};
   --accent-hover: #65a30d;
 
-  --bg-color: variables.$biege-100;
+  --bg-color: #{variables.$biege-100};
   --bg-secondary: #f9f9f9;
   --bg-tertiary: #f5f5f5;
 
@@ -21,7 +21,7 @@
   --text-muted: #666;
 
   --border-color: #e0e0e0;
-  --card-bg: variables.$white;
+  --card-bg: #{variables.$white};
   --footer-bg: #111;
   --cta-bg: #1a1a1a;
 
@@ -98,17 +98,17 @@ header {
   }
 
   .nav__item {
-    border-bottom: 3px solid transparent;
+    border-bottom: var(--spacing-xxs) solid transparent;
     border-top-left-radius: var(--spacing-xs);
     border-top-right-radius: var(--spacing-xs);
     position: relative;
-    padding: var(--spacing-sm) 0;
+
     a {
       text-decoration: none;
-      color: var(--text-muted);
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: var(--spacing-sm) 0;
     }
 
     &:hover,
