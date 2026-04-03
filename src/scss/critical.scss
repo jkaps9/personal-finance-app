@@ -219,6 +219,13 @@ main#overview {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-xl);
+
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
 }
 
 @media (min-width: 48rem) {
@@ -312,6 +319,30 @@ main#overview {
         flex-direction: row;
         gap: var(--spacing-md);
       }
+    }
+  }
+
+  main#overview {
+    align-content: start;
+    column-gap: var(--spacing-xl);
+    grid-template-columns: 3fr 2fr;
+    padding: var(--spacing-xxl) var(--spacing-xxxl);
+    row-gap: var(--spacing-xxl);
+
+    .overview {
+      grid-column: 1 / -1;
+    }
+
+    & > * {
+      .container {
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    .left,
+    .right {
+      gap: var(--spacing-xxl);
     }
   }
 }

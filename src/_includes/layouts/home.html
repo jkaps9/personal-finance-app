@@ -6,7 +6,13 @@
     </div>
   </section>
   {% include "partials/overview.html" %}
-  {% include "partials/overview-pots.html" %}
-  {% include "partials/overview-budgets.html" %}
-  {% include "partials/overview-transactions.html" %}
+  <div class="left">
+    {% include "partials/overview-pots.html" %}
+    {% include "partials/overview-transactions.html" %}
+  </div>
+
+  <div class="right">
+    {% include "partials/overview-budgets.html" %}
+    {% include "partials/overview-recurring.html" %}
+  </div>
 {% endblock %}
