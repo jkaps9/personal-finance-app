@@ -551,6 +551,9 @@ main#overview {
     }
   }
 
+  .pots-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .overview-budgets {
     flex: 1;
     .container {
