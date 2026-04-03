@@ -4,7 +4,18 @@
     <div class="container">
       <h1>{{ title }}</h1>
       <div class="card">
+        <div class="input-row">
+          <input type="text" />
+        </div>
+
         <ul class="transaction-list">
+          <li class="transaction-list__headers transaction-list__item">
+            <p class="transaction-list__header">Recipient / Sender</p>
+            <p class="transaction-list__header">Category</p>
+            <p class="transaction-list__header">Date</p>
+            <p class="transaction-list__header">Amount</p>
+          </li>
+          <li class="transaction-list__divider"></li>
           {% for transaction in collections.transactions.slice(0, 10) %}
             <li class="transaction-list__item">
               <div class="transaction-list__image-and-title">
@@ -14,10 +25,21 @@
                     alt="{{ transaction.name }} avatar"
                   />
                 </div>
-                <p class="transaction-list__description">
-                  {{ transaction.name }}
-                </p>
+                <div class="text">
+                  <p class="transaction-list__description">
+                    {{ transaction.name }}
+                  </p>
+                  <p class="transaction-list__category">
+                    {{ transaction.category }}
+                  </p>
+                </div>
               </div>
+              <p class="transaction-list__category">
+                {{ transaction.category }}
+              </p>
+              <p class="transaction-list__date date">
+                {{ transaction.date | readableDate }}
+              </p>
               <div class="transaction-list__value-and-date">
                 <p
                   class="value {% if transaction.amount > 0 %}positive{% endif %}"
