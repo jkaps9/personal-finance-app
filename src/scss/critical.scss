@@ -68,11 +68,11 @@
 }
 
 body {
-  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: "Public Sans", sans-serif;
   letter-spacing: 0px;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  line-height: 1.6;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
