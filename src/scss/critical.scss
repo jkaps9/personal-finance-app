@@ -171,6 +171,19 @@ footer {
   text-align: center;
 }
 
+main#overview {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+}
+
 .overview-pots {
   .card {
     gap: var(--spacing-lg);
@@ -227,19 +240,6 @@ footer {
 
   p {
     font-weight: 700;
-  }
-}
-
-main#overview {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-xl);
-
-  .left,
-  .right {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xl);
   }
 }
 
