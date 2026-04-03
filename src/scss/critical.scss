@@ -332,6 +332,12 @@ main#overview {
       }
     }
 
+    #minimize-btn {
+      svg {
+        transition: transform 0.5s ease-in-out;
+      }
+    }
+
     .nav__item {
       border: none;
       border-radius: 0 var(--spacing-xs) var(--spacing-xs) 0;
@@ -359,6 +365,10 @@ main#overview {
       .main-nav > .logo > .small {
         width: auto;
         height: auto;
+      }
+
+      #minimize-btn svg {
+        transform: rotateZ(180deg);
       }
     }
   }
