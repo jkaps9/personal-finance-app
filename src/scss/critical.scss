@@ -563,4 +563,18 @@ main#overview {
       gap: var(--spacing-xxl);
     }
   }
+
+  .overview-budgets {
+    flex: 1;
+    .container {
+      display: flex;
+      height: 100%;
+    }
+
+    .budgets-container {
+      align-items: center;
+      flex: 1;
+      gap: var(--spacing-md);
+    }
+  }
 }
