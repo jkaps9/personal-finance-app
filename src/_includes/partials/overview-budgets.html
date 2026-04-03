@@ -1,7 +1,16 @@
 <section class="overview-budgets">
   <div class="container">
     <div class="card">
-      <h2 class="section-title">Budgets</h2>
+      <div class="card__title-row">
+        <h2 class="section-title">Budgets</h2>
+        <a
+          href="{{ '/pots/' | url }}"
+          class="btn--tertiary"
+        >
+          <span>See Details</span>
+          {% include "svgs/icon-caret-right.svg" %}
+        </a>
+      </div>
       <div class="chart">
         <p>
           <span class="spent">$338</span>
