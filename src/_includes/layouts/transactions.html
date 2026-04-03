@@ -1,12 +1,38 @@
 {% extends "layouts/base.html" %}
 {% block content %}
-  Overview Transactions Budgets Pots Recurring Bills Minimize Menu Search
-  transactions Sort by Latest Oldest A to Z Z to A Highest Lowest Category All
-  Transactions Entertainment Bills Groceries Dining Out Transportation Personal
-  Care Education Lifestyle Shopping General Recipient/Sender Category
-  Transaction Date Amount
-
-  <!-- Add transaction data -->
-
-  Prev Next
+  <section class="transactions">
+    <div class="container">
+      <h1>{{ title }}</h1>
+      <div class="card">
+        <ul class="transaction-list">
+          {% for transaction in collections.transactions.slice(0, 10) %}
+            <li class="transaction-list__item">
+              <div class="transaction-list__image-and-title">
+                <div class="transaction-list__image">
+                  <img
+                    src="{{ '../' + transaction.avatar | url }}"
+                    alt="{{ transaction.name }} avatar"
+                  />
+                </div>
+                <p class="transaction-list__description">
+                  {{ transaction.name }}
+                </p>
+              </div>
+              <div class="transaction-list__value-and-date">
+                <p
+                  class="value {% if transaction.amount > 0 %}positive{% endif %}"
+                >
+                  {{ transaction.amount | amount }}
+                </p>
+                <p class="date">{{ transaction.date | readableDate }}</p>
+              </div>
+            </li>
+            {% if not loop.last %}
+              <li class="transaction-list__divider"></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
 {% endblock %}
