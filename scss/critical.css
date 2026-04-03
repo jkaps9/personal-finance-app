@@ -337,11 +337,17 @@ header .nav__item a span {
   display: none;
   font-weight: 700;
 }
-header .nav__item:hover, header .nav__item.active {
+header .nav__item:hover a {
+  color: #ffffff;
+}
+header .nav__item:hover:not(.active) svg * {
+  fill: #ffffff;
+}
+header .nav__item.active {
   background-color: #ffffff;
   border-bottom-color: var(--accent-color);
 }
-header .nav__item:hover svg *, header .nav__item.active svg * {
+header .nav__item.active svg * {
   fill: var(--accent-color);
   stroke: var(--accent-color);
 }
@@ -425,7 +431,7 @@ main#overview .right {
   header .nav__item a span {
     display: block;
   }
-  header .nav__item:hover a, header .nav__item.active a {
+  header .nav__item.active a {
     color: #201f24;
   }
   .overview .card {
@@ -468,8 +474,12 @@ main#overview .right {
     padding: var(--spacing-xxxl) var(--spacing-xxl);
   }
   header .main-nav .logo .small {
-    width: 0;
+    max-width: 0;
+  }
+  header .main-nav .logo .small,
+  header .main-nav .logo .large {
     overflow: hidden;
+    transition: max-width 0.5s ease-in-out;
   }
   header .main-nav .nav__list {
     gap: var(--spacing-xxs);
@@ -489,6 +499,16 @@ main#overview .right {
   header .nav__buttons .btn--tertiary:hover svg * {
     fill: #ffffff;
   }
+  header .nav__buttons span {
+    display: inline-block;
+    transition: max-width 0.5s ease-in-out;
+    max-width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  header #minimize-btn svg {
+    transition: transform 0.5s ease-in-out;
+  }
   header .nav__item {
     border: none;
     border-radius: 0 var(--spacing-xs) var(--spacing-xs) 0;
@@ -499,17 +519,28 @@ main#overview .right {
     flex-direction: row;
     gap: var(--spacing-md);
   }
-  header.minimized .container {
-    min-width: 0;
+  header .nav__item a span {
+    display: inline-block;
+    transition: max-width 0.5s ease-in-out;
+    max-width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
   }
-  header.minimized .main-nav > .logo > .large,
+  header.minimized .container {
+    max-width: 0;
+  }
   header.minimized .nav__item > a > span,
   header.minimized .nav__buttons > button > span {
-    width: 0;
-    overflow: hidden;
+    max-width: 0;
   }
-  header.minimized .main-nav > .logo > .small {
-    width: auto;
+  header.minimized .main-nav > .logo .small {
+    max-width: 500px;
+  }
+  header.minimized .main-nav > .logo .large {
+    max-width: 0;
+  }
+  header.minimized #minimize-btn svg {
+    transform: rotateZ(180deg);
   }
   main#overview {
     align-content: start;
