@@ -119,19 +119,19 @@ table {
   text-decoration: none;
 }
 .btn--primary {
-  background-color: #201f24;
-  color: #ffffff;
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-light);
 }
 .btn--primary:hover {
-  background-color: #696868;
+  background-color: var(--bg-color-medium);
 }
 .btn--secondary {
-  background-color: #f8f4f0;
+  background-color: var(--bg-color);
   color: #201f24;
 }
 .btn--secondary:hover {
   background-color: #ffffff;
-  border-color: #98908b;
+  border-color: var(--border-color);
 }
 .btn--destroy {
   background: #c94736;
@@ -214,20 +214,14 @@ table {
   --primary-color: #1e3a8a;
   --primary-hover: #1e40af;
   --accent-color: #277c78;
-  --accent-hover: #65a30d;
   --bg-color: #f8f4f0;
+  --bg-color-medium: #696868;
   --bg-color-dark: #201f24;
-  --bg-secondary: #f9f9f9;
-  --bg-tertiary: #f5f5f5;
   --text-color: #201f24;
   --text-color-light: #ffffff;
   --text-color-medium: #b3b3b3;
-  --text-secondary: #555;
-  --text-muted: #666;
-  --border-color: #e0e0e0;
+  --border-color: #98908b;
   --card-bg: #ffffff;
-  --footer-bg: #111;
-  --cta-bg: #1a1a1a;
   --spacing-xxs: 0.25rem;
   --spacing-xs: 0.5rem;
   --spacing-sm: 0.75rem;
@@ -247,20 +241,13 @@ table {
     --primary-hover: #60a5fa;
     --bg-color: #201f24;
     --bg-color-dark: #f2f2f2;
-    --bg-secondary: #1a1a1a;
-    --bg-tertiary: #262626;
     --text-color: #f2f2f2;
     --text-color-light: #201f24;
     --text-color-medium: #696868;
-    --text-secondary: #a3a3a3;
-    --text-muted: #737373;
-    --border-color: #333;
     --card-bg: #201f24;
-    --footer-bg: #000;
-    --cta-bg: #000;
   }
   .card {
-    border: 1px solid #696868;
+    border: 1px solid var(--border-color);
   }
 }
 body {
@@ -686,6 +673,9 @@ main#overview .right {
   main#overview .left,
   main#overview .right {
     gap: var(--spacing-xxl);
+  }
+  .pots-container {
+    grid-template-columns: repeat(2, 1fr);
   }
   .overview-budgets {
     flex: 1;
