@@ -288,7 +288,8 @@ main#overview {
       margin: 0;
       min-width: 300px;
       padding: 0 var(--spacing-xl) 0 0;
-      width: 100%;
+
+      transition: min-width 0.5s ease-in-out;
     }
 
     .main-nav {
@@ -369,9 +370,12 @@ main#overview {
       }
     }
 
+    // TODO: fix logo animation
+    // TODO: fix container animation (might be related to logo animation)
+
     &.minimized {
       .container {
-        max-width: 0;
+        min-width: 0;
       }
 
       .nav__item > a > span,
