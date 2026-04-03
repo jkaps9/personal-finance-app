@@ -1,42 +1,53 @@
 <section class="overview-pots">
   <div class="container">
     <div class="card">
-      <h2 class="section-title">Pots</h2>
-      <div class="pot-total">
-        {% include "svgs/icon-pot.svg" %}
-        <div class="pot-total__text">
-          <h3>Total Saved</h3>
-          <p class="large-text">$850</p>
-        </div>
+      <div class="card__title-row">
+        <h2 class="section-title">Pots</h2>
+        <a
+          href="{{ '/pots/' | url }}"
+          class="btn--tertiary"
+        >
+          <span>See Details</span>
+          {% include "svgs/icon-caret-right.svg" %}
+        </a>
       </div>
-      <div class="pot-container">
-        <div
-          class="pot pot-1"
-          data-tag="green"
-        >
-          <h4>Savings</h4>
-          <p>$159</p>
+      <div class="pots-container">
+        <div class="pot-total">
+          {% include "svgs/icon-pot.svg" %}
+          <div class="pot-total__text">
+            <h3>Total Saved</h3>
+            <p class="large-text">$850</p>
+          </div>
         </div>
-        <div
-          class="pot pot-2"
-          data-tag="cyan"
-        >
-          <h4>Gift</h4>
-          <p>$40</p>
-        </div>
-        <div
-          class="pot pot-3"
-          data-tag="navy"
-        >
-          <h4>Concert Ticket</h4>
-          <p>$110</p>
-        </div>
-        <div
-          class="pot pot-4"
-          data-tag="yellow"
-        >
-          <h4>New Laptop</h4>
-          <p>$10</p>
+        <div class="pot-container">
+          <div
+            class="pot pot-1"
+            data-tag="green"
+          >
+            <h4>Savings</h4>
+            <p>$159</p>
+          </div>
+          <div
+            class="pot pot-2"
+            data-tag="cyan"
+          >
+            <h4>Gift</h4>
+            <p>$40</p>
+          </div>
+          <div
+            class="pot pot-3"
+            data-tag="navy"
+          >
+            <h4>Concert Ticket</h4>
+            <p>$110</p>
+          </div>
+          <div
+            class="pot pot-4"
+            data-tag="yellow"
+          >
+            <h4>New Laptop</h4>
+            <p>$10</p>
+          </div>
         </div>
       </div>
     </div>
