@@ -22,8 +22,12 @@
             </div>
             <p class="transaction-list__description">{{ transaction.name }}</p>
             <div class="transaction-list__details">
-              <p class="amount positive">{{ transaction.amount }}</p>
-              <p class="date">{{ transaction.date }}</p>
+              <p
+                class="amount {% if transaction.amount > 0 %}positive{% endif %}"
+              >
+                {{ transaction.amount | amount }}
+              </p>
+              <p class="date">{{ transaction.date | readableDate }}</p>
             </div>
           </li>
         {% endfor %}

@@ -44,7 +44,17 @@ export default function (config) {
 
   // add date filter
   config.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
+    return DateTime.fromISO(dateObj).toLocaleString(DateTime.DATE_MED);
+  });
+
+  // add amount filter
+  config.addFilter("amount", (amountObj) => {
+    if (amountObj >= 0) {
+      return `+$${amountObj.toFixed(2)}`;
+    } else {
+      const amount = amountObj * -1;
+      return `-$${amount.toFixed(2)}`;
+    }
   });
 
   // add collections
