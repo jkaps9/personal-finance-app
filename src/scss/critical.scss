@@ -140,7 +140,18 @@ header {
       }
     }
 
-    &:hover,
+    &:hover {
+      a {
+        color: variables.$white;
+      }
+
+      &:not(.active) {
+        svg * {
+          fill: variables.$white;
+        }
+      }
+    }
+
     &.active {
       background-color: variables.$white;
       border-bottom-color: var(--accent-color);
@@ -241,7 +252,7 @@ main#overview {
           display: block;
         }
       }
-      &:hover,
+
       &.active {
         a {
           color: variables.$grey-900;
