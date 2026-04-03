@@ -146,6 +146,8 @@ table {
   font-weight: 400;
   line-height: 1.5;
   align-items: center;
+  background: none;
+  border: none;
   color: #696868;
   display: inline-flex;
   gap: var(--spacing-sm);
@@ -297,14 +299,16 @@ p {
 header {
   position: fixed;
   bottom: 0;
-  border-top-right-radius: var(--spacing-xs);
-  border-top-left-radius: var(--spacing-xs);
+  border-radius: var(--spacing-xs) var(--spacing-xs) 0 0;
   left: 0;
   right: 0;
   z-index: 1000;
 }
 header .main-nav {
   padding: var(--spacing-xs) 0 0;
+}
+header .main-nav .logo {
+  display: none;
 }
 header .main-nav .nav__list {
   align-items: center;
@@ -314,8 +318,7 @@ header .main-nav .nav__list {
 }
 header .nav__item {
   border-bottom: var(--spacing-xxs) solid transparent;
-  border-top-left-radius: var(--spacing-xs);
-  border-top-right-radius: var(--spacing-xs);
+  border-radius: var(--spacing-xs) var(--spacing-xs) 0 0;
   max-width: 104px;
   position: relative;
   padding: var(--spacing-xs) 0;
@@ -423,5 +426,56 @@ main#overview {
     display: grid;
     grid-template-columns: 2fr 3fr;
     column-gap: var(--spacing-lg);
+  }
+}
+@media (min-width: 64rem) {
+  body {
+    display: flex;
+    padding: 0;
+  }
+  header {
+    border-radius: 0 var(--spacing-md) var(--spacing-md) 0;
+    position: relative;
+  }
+  header .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    min-width: 300px;
+    padding: 0 var(--spacing-xl) 0 0;
+    width: 100%;
+  }
+  header .main-nav {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    max-height: 800px;
+    padding: 0;
+  }
+  header .main-nav .logo {
+    display: flex;
+    padding: var(--spacing-xxxl) var(--spacing-xxl);
+  }
+  header .main-nav .nav__list {
+    gap: var(--spacing-xxs);
+    grid-template-columns: 1fr;
+  }
+  header .nav__buttons {
+    padding: 0 var(--spacing-xxl);
+  }
+  header .nav__buttons .btn--tertiary {
+    gap: var(--spacing-md);
+  }
+  header .nav__item {
+    border: none;
+    border-radius: 0 var(--spacing-xs) var(--spacing-xs) 0;
+    max-width: none;
+    padding: var(--spacing-md) var(--spacing-xxl);
+  }
+  header .nav__item a {
+    flex-direction: row;
+    gap: var(--spacing-md);
   }
 }
