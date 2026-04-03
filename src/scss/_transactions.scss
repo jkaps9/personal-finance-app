@@ -1,5 +1,46 @@
+@use "fonts";
+@use "sass:map";
+@use "variables";
+
 .transactions {
   h1 {
     margin-bottom: var(--spacing-xxl);
+  }
+
+  .transaction-list__item > .transaction-list__category,
+  .transaction-list__item > .transaction-list__date,
+  .transaction-list__headers,
+  .transaction-list__divider.first-divider {
+    display: none;
+  }
+
+  .transaction-list__category {
+    font-weight: 400;
+  }
+
+  .transaction-list__image-and-title {
+    .text {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xs);
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  .transactions {
+    .transaction-list__item > .transaction-list__category,
+    .transaction-list__item > .transaction-list__date,
+    .transaction-list__headers,
+    .transaction-list__divider.first-divider {
+      display: flex;
+    }
+
+    .transaction-list__image-and-title {
+      .transaction-list__category {
+        display: none;
+      }
+    }
   }
 }
