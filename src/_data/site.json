@@ -7,8 +7,8 @@
       "img": "svgs/icon-nav-overview.svg"
     },
     {
-      "text": "Transaction",
-      "url": "/transaction/",
+      "text": "Transactions",
+      "url": "/transactions/",
       "img": "svgs/icon-nav-transactions.svg"
     },
     {
