@@ -12,55 +12,21 @@
         </a>
       </div>
       <ul class="transaction-list">
-        <li class="transaction-list__item">
-          <div class="transaction-list__image">
-            <img
-              src="{{ './assets/images/avatars/emma-richardson.jpg' | url }}"
-              alt="Emma Richardson avatar"
-            />
-          </div>
-          <p class="transaction-list__description">Emma Richardson</p>
-          <div class="transaction-list__details">
-            <p class="amount positive">+$75.50</p>
-            <p class="date">19 Aug 2024</p>
-          </div>
-        </li>
-        <li class="transaction-list__divider"></li>
-        <li class="transaction-list__item">
-          <div class="img"></div>
-          <p class="description">Savory Bites Bistro</p>
-          <div class="right">
-            <p class="amount">-$55.50</p>
-            <p class="date">19 Aug 2024</p>
-          </div>
-        </li>
-        <li class="transaction-list__divider"></li>
-        <li class="transaction-list__item">
-          <div class="img"></div>
-          <p class="description">Daniel Carter</p>
-          <div class="right">
-            <p class="amount">-$42.30</p>
-            <p class="date">18 Aug 2024</p>
-          </div>
-        </li>
-        <li class="transaction-list__divider"></li>
-        <li class="transaction-list__item">
-          <div class="img"></div>
-          <p class="description">Sun Park</p>
-          <div class="right">
-            <p class="amount">+$120.00</p>
-            <p class="date">17 Aug 2024</p>
-          </div>
-        </li>
-        <li class="transaction-list__divider"></li>
-        <li class="transaction-list__item">
-          <div class="img"></div>
-          <p class="description">Urban Services Hub</p>
-          <div class="right">
-            <p class="amount">-$65.00</p>
-            <p class="date">17 Aug 2024</p>
-          </div>
-        </li>
+        {% for transaction in collections.transactions.slice(0, 5) %}
+          <li class="transaction-list__item">
+            <div class="transaction-list__image">
+              <img
+                src="{{ transaction.avatar | url }}"
+                alt="{{ transaction.name }} avatar"
+              />
+            </div>
+            <p class="transaction-list__description">{{ transaction.name }}</p>
+            <div class="transaction-list__details">
+              <p class="amount positive">{{ transaction.amount }}</p>
+              <p class="date">{{ transaction.date }}</p>
+            </div>
+          </li>
+        {% endfor %}
       </ul>
     </div>
   </div>

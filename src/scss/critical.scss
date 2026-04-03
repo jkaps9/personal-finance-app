@@ -39,7 +39,7 @@
   --container-max-width: 70rem;
   --container-width: 90%;
 
-  --card-padding: var(--spacing-xxl) var(--spacing-lg);
+  --card-padding: var(--spacing-xl) var(--spacing-lg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -298,6 +298,10 @@ main#overview {
 }
 
 @media (min-width: 48rem) {
+  :root {
+    --card-padding: var(--spacing-xxl);
+  }
+
   header {
     .nav__item {
       a {

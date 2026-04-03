@@ -47,6 +47,14 @@ export default function (config) {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
   });
 
+  // add collections
+  config.addCollection("transactions", async (collectionsApi) => {
+    const allGlobalData = collectionsApi.getAll()[0].data;
+    return allGlobalData.data.transactions.sort(function (a, b) {
+      return b.date - a.date;
+    });
+  });
+
   return {
     pathPrefix:
       process.env.NODE_ENV === "production" ? "/personal-finance-app/" : "/",
