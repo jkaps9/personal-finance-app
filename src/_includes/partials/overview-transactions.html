@@ -14,16 +14,20 @@
       <ul class="transaction-list">
         {% for transaction in collections.transactions.slice(0, 5) %}
           <li class="transaction-list__item">
-            <div class="transaction-list__image">
-              <img
-                src="{{ transaction.avatar | url }}"
-                alt="{{ transaction.name }} avatar"
-              />
+            <div class="transaction-list__image-and-title">
+              <div class="transaction-list__image">
+                <img
+                  src="{{ transaction.avatar | url }}"
+                  alt="{{ transaction.name }} avatar"
+                />
+              </div>
+              <p class="transaction-list__description">
+                {{ transaction.name }}
+              </p>
             </div>
-            <p class="transaction-list__description">{{ transaction.name }}</p>
-            <div class="transaction-list__details">
+            <div class="transaction-list__value-and-date">
               <p
-                class="amount {% if transaction.amount > 0 %}positive{% endif %}"
+                class="value {% if transaction.amount > 0 %}positive{% endif %}"
               >
                 {{ transaction.amount | amount }}
               </p>

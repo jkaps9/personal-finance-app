@@ -273,17 +273,22 @@ main#overview {
     background-color: variables.$grey-100;
   }
 
-  &__description {
-    font-weight: 700;
+  &__image-and-title {
+    align-items: center;
+    display: flex;
+    gap: var(--spacing-md);
+    p {
+      font-weight: 700;
+    }
   }
 
-  &__details {
+  &__value-and-date {
     align-items: flex-end;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
 
-    .amount {
+    .value {
       font-weight: 700;
       &.positive {
         color: variables.$green;
