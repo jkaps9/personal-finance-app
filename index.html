@@ -313,6 +313,7 @@
       </div>
       <div class="budgets-container">
         <div class="chart">
+          <canvas id="budget-chart"></canvas>
           <p>
             <span class="large-text">$338</span>
             of $875 limit
@@ -352,6 +353,36 @@
     </div>
   </div>
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer>
+  const ctx = document.getElementById("budget-chart");
+
+  const data = {
+    labels: ["Entertainment", "Bills", "Dining Out", "Personal Care"],
+    datasets: [
+      {
+        data: [50, 750, 75, 100],
+        backgroundColor: ["#277c78", "#82c9d7", "#f2cdac", "#626070"],
+        hoverOffset: 4,
+      },
+    ],
+  };
+
+  const config = {
+    type: "doughnut",
+    data: data,
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+        },
+      },
+    },
+  };
+
+  new Chart(ctx, config);
+</script>
 
     <section class="overview-recurring">
   <div class="container">

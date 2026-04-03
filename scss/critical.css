@@ -490,10 +490,17 @@ main#overview .right {
   color: #696868;
 }
 
+.overview-budgets .chart {
+  position: relative;
+}
 .overview-budgets .chart p {
   align-items: center;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: 48rem) {
