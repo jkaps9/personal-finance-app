@@ -447,22 +447,27 @@ main#overview .right {
   height: 1px;
   background-color: #f2f2f2;
 }
-.transaction-list__description {
+.transaction-list__image-and-title {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-md);
+}
+.transaction-list__image-and-title p {
   font-weight: 700;
 }
-.transaction-list__details {
+.transaction-list__value-and-date {
   align-items: flex-end;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
 }
-.transaction-list__details .amount {
+.transaction-list__value-and-date .value {
   font-weight: 700;
 }
-.transaction-list__details .amount.positive {
+.transaction-list__value-and-date .value.positive {
   color: #277c78;
 }
-.transaction-list__details .date {
+.transaction-list__value-and-date .date {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.5;
