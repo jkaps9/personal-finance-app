@@ -687,4 +687,16 @@ main#overview .right {
   main#overview .right {
     gap: var(--spacing-xxl);
   }
+  .overview-budgets {
+    flex: 1;
+  }
+  .overview-budgets .container {
+    display: flex;
+    height: 100%;
+  }
+  .overview-budgets .budgets-container {
+    align-items: center;
+    flex: 1;
+    gap: var(--spacing-md);
+  }
 }
