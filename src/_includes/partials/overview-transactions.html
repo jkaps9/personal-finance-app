@@ -1,7 +1,16 @@
 <section class="overview-transactions">
   <div class="container">
     <div class="card">
-      <h2 class="section-title">Transactions</h2>
+      <div class="card__title-row">
+        <h2 class="section-title">Transactions</h2>
+        <a
+          href="{{ '/transactions/' | url }}"
+          class="btn--tertiary"
+        >
+          <span>View All</span>
+          {% include "svgs/icon-caret-right.svg" %}
+        </a>
+      </div>
       <ul class="transaction-list">
         <li class="transaction-list__item">
           <div class="img"></div>
