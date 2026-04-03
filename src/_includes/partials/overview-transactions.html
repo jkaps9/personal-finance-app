@@ -34,6 +34,9 @@
               <p class="date">{{ transaction.date | readableDate }}</p>
             </div>
           </li>
+          {% if not loop.last %}
+            <li class="transaction-list__divider"></li>
+          {% endif %}
         {% endfor %}
       </ul>
     </div>
