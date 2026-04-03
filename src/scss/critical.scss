@@ -219,13 +219,15 @@ main#overview {
   }
 }
 
-.pot-container {
+.pot-container,
+.budget-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: var(--spacing-md);
 }
 
-.pot {
+.pot,
+.budget {
   border-left: 4px solid variables.$green;
   display: flex;
   flex-direction: column;
