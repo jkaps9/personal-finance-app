@@ -121,26 +121,20 @@ table {
 }
 
 .card {
+  flex: 1;
   background-color: var(--card-bg);
-  border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: var(--card-padding);
-}
-.card__title-row {
+  border-radius: var(--spacing-sm);
   display: flex;
-  justify-content: space-between;
-}
-.card .stats__item .value {
-  color: var(--text-color);
-}
-.card .stats__sublist {
-  padding-left: 1rem;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--card-padding);
 }
 
 .card-container {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+  width: 100%;
 }
 
 .dark-bg {
@@ -156,6 +150,18 @@ table {
   color: #b3b3b3;
 }
 
+.large-text {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (min-width: 48rem) {
+  .card-container {
+    flex-direction: row;
+    gap: var(--spacing-xxl);
+  }
+}
 :root {
   --primary-color: #1e3a8a;
   --primary-hover: #1e40af;
@@ -181,9 +187,7 @@ table {
   --spacing-xxxl: 2.5rem;
   --container-max-width: 70rem;
   --container-width: 90%;
-  --card-padding: 1.5rem 2rem;
-  --card-width: 250px;
-  --card-container-gap: 1rem;
+  --card-padding: var(--spacing-xxl) var(--spacing-lg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -212,6 +216,30 @@ body {
   line-height: 1.6;
   padding: var(--spacing-xl) 0 calc(4 * var(--spacing-xl));
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h4 {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 header {
@@ -256,6 +284,21 @@ header .nav__item:hover svg *, header .nav__item.active svg * {
 
 footer {
   text-align: center;
+}
+
+.pot,
+.pot__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.pot.total {
+  align-items: center;
+  background-color: #f8f4f0;
+  flex-direction: row;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
 }
 
 @media (min-width: 48rem) {
