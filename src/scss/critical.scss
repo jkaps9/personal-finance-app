@@ -304,9 +304,13 @@ main#overview {
         padding: var(--spacing-xxxl) var(--spacing-xxl);
 
         .small {
-          width: 0;
-          height: 0;
+          max-width: 0;
+        }
+
+        .small,
+        .large {
           overflow: hidden;
+          transition: max-width 0.5s ease-in-out;
         }
       }
 
@@ -330,6 +334,14 @@ main#overview {
           }
         }
       }
+
+      span {
+        display: inline-block;
+        transition: max-width 0.5s ease-in-out;
+        max-width: 500px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
     }
 
     #minimize-btn {
@@ -346,25 +358,35 @@ main#overview {
       a {
         flex-direction: row;
         gap: var(--spacing-md);
+
+        span {
+          display: inline-block;
+          transition: max-width 0.5s ease-in-out;
+          max-width: 500px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
       }
     }
 
     &.minimized {
       .container {
-        min-width: 0;
+        max-width: 0;
       }
 
-      .main-nav > .logo > .large,
       .nav__item > a > span,
       .nav__buttons > button > span {
-        height: 0;
-        overflow: hidden;
-        width: 0;
+        max-width: 0;
       }
 
-      .main-nav > .logo > .small {
-        width: auto;
-        height: auto;
+      .main-nav > .logo {
+        .small {
+          max-width: 500px;
+        }
+
+        .large {
+          max-width: 0;
+        }
       }
 
       #minimize-btn svg {
