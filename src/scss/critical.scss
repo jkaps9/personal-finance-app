@@ -73,6 +73,7 @@ body {
   font-family: "Public Sans", sans-serif;
   letter-spacing: 0px;
   line-height: 1.6;
+  padding: var(--spacing-xl) 0 calc(2 * var(--spacing-xl));
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
@@ -163,5 +164,5 @@ footer {
 main#overview {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-md);
+  gap: var(--spacing-xl);
 }

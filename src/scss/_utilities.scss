@@ -47,6 +47,12 @@
   }
 }
 
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
 .dark-bg {
   background-color: variables.$grey-900;
   color: variables.$white;
