@@ -345,6 +345,9 @@ header .nav__item:hover svg *, header .nav__item.active svg * {
   fill: var(--accent-color);
   stroke: var(--accent-color);
 }
+header .nav__buttons {
+  display: none;
+}
 
 footer {
   text-align: center;
@@ -408,6 +411,12 @@ main#overview {
   grid-template-columns: 1fr;
   gap: var(--spacing-xl);
 }
+main#overview .left,
+main#overview .right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
 
 @media (min-width: 48rem) {
   header .nav__item a {
@@ -458,15 +467,27 @@ main#overview {
     display: flex;
     padding: var(--spacing-xxxl) var(--spacing-xxl);
   }
+  header .main-nav .logo .small {
+    width: 0;
+    overflow: hidden;
+  }
   header .main-nav .nav__list {
     gap: var(--spacing-xxs);
     grid-template-columns: 1fr;
   }
   header .nav__buttons {
+    display: block;
     padding: 0 var(--spacing-xxl);
   }
   header .nav__buttons .btn--tertiary {
+    cursor: pointer;
     gap: var(--spacing-md);
+  }
+  header .nav__buttons .btn--tertiary:hover {
+    color: #ffffff;
+  }
+  header .nav__buttons .btn--tertiary:hover svg * {
+    fill: #ffffff;
   }
   header .nav__item {
     border: none;
@@ -477,5 +498,35 @@ main#overview {
   header .nav__item a {
     flex-direction: row;
     gap: var(--spacing-md);
+  }
+  header.minimized .container {
+    min-width: 0;
+  }
+  header.minimized .main-nav > .logo > .large,
+  header.minimized .nav__item > a > span,
+  header.minimized .nav__buttons > button > span {
+    width: 0;
+    overflow: hidden;
+  }
+  header.minimized .main-nav > .logo > .small {
+    width: auto;
+  }
+  main#overview {
+    align-content: start;
+    column-gap: var(--spacing-xl);
+    grid-template-columns: 3fr 2fr;
+    padding: var(--spacing-xxl) var(--spacing-xxxl);
+    row-gap: var(--spacing-xxl);
+  }
+  main#overview .overview {
+    grid-column: 1/-1;
+  }
+  main#overview > * .container {
+    margin: 0;
+    width: 100%;
+  }
+  main#overview .left,
+  main#overview .right {
+    gap: var(--spacing-xxl);
   }
 }
