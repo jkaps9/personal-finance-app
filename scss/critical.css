@@ -459,7 +459,7 @@ main#overview .right {
     margin: 0;
     min-width: 300px;
     padding: 0 var(--spacing-xl) 0 0;
-    width: 100%;
+    transition: min-width 0.5s ease-in-out;
   }
   header .main-nav {
     display: flex;
@@ -527,7 +527,7 @@ main#overview .right {
     white-space: nowrap;
   }
   header.minimized .container {
-    max-width: 0;
+    min-width: 0;
   }
   header.minimized .nav__item > a > span,
   header.minimized .nav__buttons > button > span {
