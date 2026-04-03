@@ -117,4 +117,8 @@
     flex-direction: row;
     gap: var(--spacing-xxl);
   }
+
+  .card {
+    padding: var(--spacing-xxl);
+  }
 }
