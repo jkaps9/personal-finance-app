@@ -1,0 +1,44 @@
+@use "variables";
+
+/* public-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/public-sans-v21-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* public-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/public-sans-v21-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@mixin textpreset1 {
+  font-size: variables.$fs-text-preset-1;
+  line-height: 1.2;
+}
+
+@mixin textpreset2 {
+  font-size: variables.$fs-text-preset-2;
+  line-height: 1.2;
+}
+
+@mixin textpreset3 {
+  font-size: variables.$fs-text-preset-3;
+  line-height: 1.5;
+}
+
+@mixin textpreset4 {
+  font-size: variables.$fs-text-preset-4;
+  line-height: 1.5;
+}
+
+@mixin textpreset5 {
+  font-size: variables.$fs-text-preset-5;
+  line-height: 1.5;
+}
