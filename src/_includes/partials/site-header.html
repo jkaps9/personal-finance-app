@@ -4,6 +4,7 @@
       class="main-nav"
       aria-label="main"
     >
+      <div class="logo">{% include "svgs/logo-large.svg" %}</div>
       <ul class="nav__list">
         {% for item in site.navigation %}
           <li class="nav__item {% if title === item.text %}active{% endif %}">
@@ -15,6 +16,14 @@
         {% endfor %}
       </ul>
     </nav>
-    <div class="navbar__buttons"></div>
+    <div class="nav__buttons">
+      <button
+        href=""
+        class="btn--tertiary"
+      >
+        {% include "svgs/icon-minimize-menu.svg" %}
+        <span>Minimize Menu</span>
+      </button>
+    </div>
   </div>
 </header>

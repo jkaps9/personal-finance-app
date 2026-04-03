@@ -58,6 +58,8 @@
 .btn--tertiary {
   @include fonts.textpreset4;
   align-items: center;
+  background: none;
+  border: none;
   color: variables.$grey-500;
   display: inline-flex;
   gap: var(--spacing-sm);

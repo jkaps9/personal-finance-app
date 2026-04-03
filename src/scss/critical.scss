@@ -100,14 +100,16 @@ p {
 header {
   position: fixed;
   bottom: 0;
-  border-top-right-radius: var(--spacing-xs);
-  border-top-left-radius: var(--spacing-xs);
+  border-radius: var(--spacing-xs) var(--spacing-xs) 0 0;
   left: 0;
   right: 0;
   z-index: 1000;
 
   .main-nav {
     padding: var(--spacing-xs) 0 0;
+    .logo {
+      display: none;
+    }
     .nav__list {
       align-items: center;
       display: grid;
@@ -250,20 +252,46 @@ main#overview {
 @media (min-width: 64rem) {
   body {
     display: flex;
+    padding: 0;
   }
 
   header {
+    border-radius: 0 var(--spacing-md) var(--spacing-md) 0;
+    position: relative;
+
     .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       margin: 0;
       min-width: 300px;
       padding: 0 var(--spacing-xl) 0 0;
       width: 100%;
     }
-    position: relative;
+
     .main-nav {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: var(--spacing-xl);
+      max-height: 800px;
       padding: 0;
+
+      .logo {
+        display: flex;
+        padding: var(--spacing-xxxl) var(--spacing-xxl);
+      }
+
       .nav__list {
+        gap: var(--spacing-xxs);
         grid-template-columns: 1fr;
+      }
+    }
+
+    .nav__buttons {
+      padding: 0 var(--spacing-xxl);
+      .btn--tertiary {
+        gap: var(--spacing-md);
       }
     }
 
