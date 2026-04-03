@@ -21,10 +21,6 @@
   <body>
     {% include "partials/site-header.html" %}
     <main id="{{ title | lower }}">{% block content %}{% endblock %}</main>
-    {% include "partials/site-footer.html" %}
     <script src="{{ '/main.js' | url }}"></script>
-    <!-- {% if title === "Blog" %}
-      <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-    {% endif %} -->
   </body>
 </html>
