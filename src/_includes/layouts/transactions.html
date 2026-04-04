@@ -5,11 +5,14 @@
       <h1>{{ title }}</h1>
       <div class="card">
         <div class="input-row">
-          <input
-            type="search"
-            placeholder="Search transaction"
-            id="transaction-search"
-          />
+          <div class="search-bar">
+            <input
+              type="search"
+              placeholder="Search transaction"
+              id="transaction-search"
+            />
+            {% include "svgs/icon-search.svg" %}
+          </div>
           <div class="dropdown-container">
             <p class="dropdown__label">Sort by</p>
             <div class="dropdown">

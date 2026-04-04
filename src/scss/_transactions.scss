@@ -2,30 +2,13 @@
 @use "sass:map";
 @use "variables";
 
-input,
-select {
+input {
   @include fonts.textpreset4;
   background: transparent;
   border: 1px solid var(--border-color);
   border-radius: var(--spacing-xs);
   color: var(--text-color);
   padding: var(--spacing-sm) var(--spacing-lg);
-}
-
-select {
-  appearance: none;
-  background-image: url("../assets/images/icon-caret-down.svg");
-  background-repeat: no-repeat;
-  background-position: right var(--spacing-lg) center;
-  background-size: 16px;
-  cursor: pointer;
-  padding-right: calc(2 * var(--spacing-lg));
-}
-
-.input-group {
-  align-items: center;
-  display: flex;
-  gap: var(--spacing-xs);
 }
 
 .transactions {
