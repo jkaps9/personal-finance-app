@@ -87,53 +87,68 @@
       <h1>Transactions</h1>
       <div class="card">
         <div class="input-row">
-          <input
-            type="search"
-            placeholder="Search transaction"
-            id="transaction-search"
-          />
-          <div class="input-group">
-            <label for="sortby">Sort by</label>
-            <select
-              id="sortby"
-              name="sortby"
-            >
-              <option
-                value="latest"
-                selected
-              >
-                Latest
-              </option>
-              <option value="oldest">Oldest</option>
-              <option value="a_to_z">A to Z</option>
-              <option value="z_to_a">Z to A</option>
-              <option value="highest">Highest</option>
-              <option value="lowest">Lowest</option>
-            </select>
+          <div class="search-bar">
+            <input
+              type="search"
+              placeholder="Search transaction"
+              id="transaction-search"
+            />
+            <svg fill="none" height="14" viewBox="0 0 14 14" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m13.3538 13.1462-3.1294-3.1287c.907-1.08894 1.3593-2.48564 1.2628-3.89955-.0966-1.41391-.7345-2.73618-1.78109-3.69173-1.0466-.95555-2.42131-1.470821-3.83815-1.438621-1.41683.032201-2.76671.609391-3.76883 1.611501-1.00211 1.00212-1.579301 2.352-1.611501 3.76883-.0322 1.41684.483071 2.79155 1.438621 3.83817.95556 1.0466 2.27782 1.6845 3.69173 1.781 1.41391.0966 2.81061-.3557 3.89954-1.2627l3.12878 3.1293c.0464.0465.1016.0833.1623.1085.0607.0251.1257.0381.1914.0381s.1308-.013.1915-.0381c.0607-.0252.1158-.062.1623-.1085.0464-.0464.0833-.1016.1084-.1623.0252-.0607.0381-.1257.0381-.1914s-.0129-.1308-.0381-.1915c-.0251-.0607-.062-.1158-.1084-.1623zm-11.85378-6.64621c0-.89002.26392-1.76005.75839-2.50007.49446-.74002 1.19727-1.31679 2.01954-1.65739.82226-.34059 1.72706-.42971 2.59998-.25607.87291.17363 1.67473.60221 2.30407 1.23155s1.0579 1.43116 1.2316 2.30407c.1736.87292.0845 1.77772-.2561 2.59999-.34062.82226-.91739 1.52507-1.65741 2.01953-.74002.4945-1.61005.7584-2.50007.7584-1.19307-.0013-2.33689-.4759-3.18052-1.31949-.84363-.84363-1.31816-1.98745-1.31948-3.18052z" fill="#201f24"/></svg>
           </div>
-          <div class="input-group">
-            <label for="category">Category</label>
-            <select
-              id="category"
-              name="category"
-            >
-              <option
-                value="all_transactions"
-                selected
-              >
-                All Transactions
-              </option>
-              <option value="entertainment">Entertainment</option>
-              <option value="bills">Bills</option>
-              <option value="groceries">Groceries</option>
-              <option value="dining_out">Dining Out</option>
-              <option value="transportation">Transportation</option>
-              <option value="personal_care">Personal Care</option>
-              <option value="education">Education</option>
-              <option value="lifestyle">Lifestyle</option>
-              <option value="shopping">Shopping</option>
-              <option value="general">General</option>
-            </select>
+          <div class="dropdown-container">
+            <p class="dropdown__label">Sort by</p>
+            <div class="dropdown">
+              <button class="dropdown__btn">
+                <span>Latest</span>
+                <svg fill="none" height="6" viewBox="0 0 12 6" width="12" xmlns="http://www.w3.org/2000/svg"><path d="m11.3538.85375-5.00002 5c-.04644.04649-.10158.08337-.16228.10853s-.12576.03811-.19147.03811-.13077-.01295-.19147-.03811-.11585-.06204-.16228-.10853l-5.000002-5c-.070006-.069927-.11769-.159054-.137015-.256096-.019325-.097043-.009423-.197638.028453-.289049.037877-.091412.102024-.16953.18432-.224465.082297-.0549354.179044-.08421771.277994-.08413985h9.99997c.099-.00007786.1957.02920445.278.08413985.0823.054935.1465.133053.1843.224465.0379.091411.0478.192006.0285.289049-.0193.097042-.067.186169-.137.256096z" fill="#201f24"/></svg>
+              </button>
+              <div class="dropdown__menu">
+                <div class="dropdown__option selected">Latest</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Oldest</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">A to Z</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Z to A</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Highest</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Lowest</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown-container">
+            <p class="dropdown__label">Category</p>
+            <div class="dropdown">
+              <button class="dropdown__btn">
+                <span>All Transactions</span>
+                <svg fill="none" height="6" viewBox="0 0 12 6" width="12" xmlns="http://www.w3.org/2000/svg"><path d="m11.3538.85375-5.00002 5c-.04644.04649-.10158.08337-.16228.10853s-.12576.03811-.19147.03811-.13077-.01295-.19147-.03811-.11585-.06204-.16228-.10853l-5.000002-5c-.070006-.069927-.11769-.159054-.137015-.256096-.019325-.097043-.009423-.197638.028453-.289049.037877-.091412.102024-.16953.18432-.224465.082297-.0549354.179044-.08421771.277994-.08413985h9.99997c.099-.00007786.1957.02920445.278.08413985.0823.054935.1465.133053.1843.224465.0379.091411.0478.192006.0285.289049-.0193.097042-.067.186169-.137.256096z" fill="#201f24"/></svg>
+              </button>
+              <div class="dropdown__menu">
+                <div class="dropdown__option selected">All Transactions</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Entertainment</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Bills</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Groceries</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Dining Out</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Transportation</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Personal Care</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Education</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Lifestyle</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Shopping</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">General</div>
+              </div>
+            </div>
           </div>
         </div>
 
