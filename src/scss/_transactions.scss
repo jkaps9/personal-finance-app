@@ -44,10 +44,22 @@ input {
     align-items: center;
     display: flex;
     gap: var(--spacing-xl);
-    justify-content: space-between;
+    justify-content: flex-end;
 
-    #transaction-search {
-      flex: 1;
+    .search-bar {
+      margin-right: auto;
+      position: relative;
+
+      input::placeholder {
+        @include fonts.textpreset4;
+        color: variables.$biege-500;
+      }
+      svg {
+        position: absolute;
+        right: var(--spacing-lg);
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
 }
@@ -96,6 +108,21 @@ input {
     .transaction-list__header:last-child {
       align-self: flex-end;
       text-align: end;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .transactions {
+    .input-row {
+      .search-bar {
+        flex: 1;
+        max-width: 320px;
+
+        input {
+          width: 100%;
+        }
+      }
     }
   }
 }
