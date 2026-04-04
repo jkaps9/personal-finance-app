@@ -127,8 +127,27 @@
     padding: var(--spacing-sm) var(--spacing-lg);
     position: relative;
 
+    span {
+      @include fonts.textpreset4;
+    }
     svg {
       transition: transform 0.3 ease-in-out;
+    }
+
+    &:hover svg {
+      transform: rotateZ(-180deg);
+    }
+
+    &::after {
+      //needed to maintain hover state when going between button and menu
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      height: var(--spacing-md); //must be same as menus top offset
+      background: transparent;
+      z-index: 1;
     }
   }
 
@@ -160,15 +179,9 @@
     }
   }
 
-  &:hover {
-    .dropdown__btn {
-      svg {
-        transform: rotateZ(-180deg);
-      }
-    }
-    .dropdown__menu {
-      display: flex;
-    }
+  &__btn:hover + .dropdown__menu,
+  &__menu:hover {
+    display: flex;
   }
 }
 
