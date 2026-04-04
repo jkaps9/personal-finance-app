@@ -5,6 +5,7 @@
 input,
 select {
   @include fonts.textpreset4;
+  background: transparent;
   border: 1px solid var(--border-color);
   border-radius: var(--spacing-xs);
   color: var(--text-color);
@@ -17,6 +18,7 @@ select {
   background-repeat: no-repeat;
   background-position: right var(--spacing-lg) center;
   background-size: 16px;
+  cursor: pointer;
   padding-right: calc(2 * var(--spacing-lg));
 }
 

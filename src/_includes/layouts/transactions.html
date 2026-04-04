@@ -10,7 +10,7 @@
             placeholder="Search transaction"
             id="transaction-search"
           />
-          <div class="input-group">
+          <!-- <div class="input-group">
             <label for="sortby">Sort by</label>
             <select
               id="sortby"
@@ -28,6 +28,25 @@
               <option value="highest">Highest</option>
               <option value="lowest">Lowest</option>
             </select>
+          </div> -->
+          <div class="dropdown">
+            <button class="dropdown__btn">
+              <span>Latest</span>
+              {% include "svgs/icon-caret-down.svg" %}
+            </button>
+            <div class="dropdown__menu">
+              <div class="dropdown__option selected">Latest</div>
+              <div class="dropdown__divider"></div>
+              <div class="dropdown__option">Oldest</div>
+              <div class="dropdown__divider"></div>
+              <div class="dropdown__option">A to Z</div>
+              <div class="dropdown__divider"></div>
+              <div class="dropdown__option">Z to A</div>
+              <div class="dropdown__divider"></div>
+              <div class="dropdown__option">Highest</div>
+              <div class="dropdown__divider"></div>
+              <div class="dropdown__option">Lowest</div>
+            </div>
           </div>
           <div class="input-group">
             <label for="category">Category</label>
