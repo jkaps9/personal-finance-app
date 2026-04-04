@@ -121,41 +121,26 @@
     gap: var(--spacing-xs);
   }
   position: relative;
+
   &__label {
     color: variables.$grey-500;
+    display: none;
   }
+
   &__btn {
-    align-items: center;
-    background: variables.$white;
-    border: 1px solid var(--border-color);
-    border-radius: var(--spacing-xs);
-    cursor: pointer;
-    display: flex;
-    gap: var(--spacing-md);
-    padding: var(--spacing-sm) var(--spacing-lg);
-    position: relative;
-
-    span {
-      @include fonts.textpreset4;
+    background: none;
+    border: none;
+    & > * {
+      display: none;
     }
-    svg {
-      transition: transform 0.3 ease-in-out;
-    }
-
-    &:hover svg {
-      transform: rotateZ(-180deg);
-    }
-
-    &::after {
-      //needed to maintain hover state when going between button and menu
-      content: "";
-      position: absolute;
-      top: 100%;
-      right: 0;
-      width: 100%;
-      height: var(--spacing-md); //must be same as menus top offset
-      background: transparent;
-      z-index: 1;
+    .mobile-icon {
+      display: block;
+      height: 20px;
+      width: 20px;
+      svg {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
@@ -200,5 +185,53 @@
 
   .card {
     padding: var(--spacing-xxl);
+  }
+
+  .dropdown {
+    &__label {
+      display: block;
+    }
+
+    &__btn {
+      align-items: center;
+      background: variables.$white;
+      border: 1px solid var(--border-color);
+      border-radius: var(--spacing-xs);
+      cursor: pointer;
+      display: flex;
+      gap: var(--spacing-md);
+      padding: var(--spacing-sm) var(--spacing-lg);
+      position: relative;
+
+      & > * {
+        display: block;
+      }
+      .mobile-icon {
+        display: none;
+      }
+
+      span {
+        @include fonts.textpreset4;
+      }
+      svg {
+        transition: transform 0.3 ease-in-out;
+      }
+
+      &:hover svg {
+        transform: rotateZ(-180deg);
+      }
+
+      &::after {
+        //needed to maintain hover state when going between button and menu
+        content: "";
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        height: var(--spacing-md); //must be same as menus top offset
+        background: transparent;
+        z-index: 1;
+      }
+    }
   }
 }
