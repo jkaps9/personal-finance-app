@@ -115,7 +115,15 @@
 }
 
 .dropdown {
+  &-container {
+    align-items: center;
+    display: flex;
+    gap: var(--spacing-xs);
+  }
   position: relative;
+  &__label {
+    color: variables.$grey-500;
+  }
   &__btn {
     align-items: center;
     background: variables.$white;
@@ -166,7 +174,6 @@
     flex-direction: column;
     gap: var(--spacing-sm);
     left: 0;
-    max-height: 300px;
     padding: var(--spacing-sm) var(--spacing-lg);
     position: absolute;
     right: 0;

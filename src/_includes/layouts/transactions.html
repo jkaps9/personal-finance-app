@@ -10,48 +10,60 @@
             placeholder="Search transaction"
             id="transaction-search"
           />
-          <div class="dropdown">
-            <button class="dropdown__btn">
-              <span>Latest</span>
-              {% include "svgs/icon-caret-down.svg" %}
-            </button>
-            <div class="dropdown__menu">
-              <div class="dropdown__option selected">Latest</div>
-              <div class="dropdown__divider"></div>
-              <div class="dropdown__option">Oldest</div>
-              <div class="dropdown__divider"></div>
-              <div class="dropdown__option">A to Z</div>
-              <div class="dropdown__divider"></div>
-              <div class="dropdown__option">Z to A</div>
-              <div class="dropdown__divider"></div>
-              <div class="dropdown__option">Highest</div>
-              <div class="dropdown__divider"></div>
-              <div class="dropdown__option">Lowest</div>
+          <div class="dropdown-container">
+            <p class="dropdown__label">Sort by</p>
+            <div class="dropdown">
+              <button class="dropdown__btn">
+                <span>Latest</span>
+                {% include "svgs/icon-caret-down.svg" %}
+              </button>
+              <div class="dropdown__menu">
+                <div class="dropdown__option selected">Latest</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Oldest</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">A to Z</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Z to A</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Highest</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Lowest</div>
+              </div>
             </div>
           </div>
-          <div class="input-group">
-            <label for="category">Category</label>
-            <select
-              id="category"
-              name="category"
-            >
-              <option
-                value="all_transactions"
-                selected
-              >
-                All Transactions
-              </option>
-              <option value="entertainment">Entertainment</option>
-              <option value="bills">Bills</option>
-              <option value="groceries">Groceries</option>
-              <option value="dining_out">Dining Out</option>
-              <option value="transportation">Transportation</option>
-              <option value="personal_care">Personal Care</option>
-              <option value="education">Education</option>
-              <option value="lifestyle">Lifestyle</option>
-              <option value="shopping">Shopping</option>
-              <option value="general">General</option>
-            </select>
+
+          <div class="dropdown-container">
+            <p class="dropdown__label">Category</p>
+            <div class="dropdown">
+              <button class="dropdown__btn">
+                <span>All Transactions</span>
+                {% include "svgs/icon-caret-down.svg" %}
+              </button>
+              <div class="dropdown__menu">
+                <div class="dropdown__option selected">All Transactions</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Entertainment</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Bills</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Groceries</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Dining Out</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Transportation</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Personal Care</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Education</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Lifestyle</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">Shopping</div>
+                <div class="dropdown__divider"></div>
+                <div class="dropdown__option">General</div>
+              </div>
+            </div>
           </div>
         </div>
 
