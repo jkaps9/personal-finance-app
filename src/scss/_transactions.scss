@@ -87,6 +87,10 @@ input {
 
   .page-buttons {
     gap: var(--spacing-xs);
+
+    .btn--pagination {
+      max-width: var(--spacing-xxxl);
+    }
   }
 }
 
