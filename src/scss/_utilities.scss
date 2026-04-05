@@ -63,6 +63,14 @@
     height: var(--spacing-xxxl);
     justify-content: center;
 
+    &:hover {
+      background: variables.$biege-500;
+      color: var(--text-color-light);
+      svg * {
+        fill: var(--text-color-light);
+      }
+    }
+
     &.active {
       background: var(--bg-color-dark);
       color: var(--text-color-light);
