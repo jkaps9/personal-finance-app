@@ -133,7 +133,11 @@
           <div class="page-buttons">
             {% set pageCount = collections.transactions.length/10 %}
             {% for i in range(0, pageCount|round) %}
-              <button class="btn btn--pagination">{{ i+1 }}</button>
+              <button
+                class="btn btn--pagination {% if i===0 %}active{% endif %}"
+              >
+                {{ i+1 }}
+              </button>
             {% endfor %}
           </div>
           <button
