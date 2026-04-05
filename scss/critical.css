@@ -140,6 +140,15 @@ table {
 .btn--destroy:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), #c94736;
 }
+.btn--pagination {
+  align-items: center;
+  background: none;
+  border-color: var(--border-color);
+  display: inline-flex;
+  gap: var(--spacing-md);
+  height: var(--spacing-xxxl);
+  justify-content: center;
+}
 
 .btn--tertiary {
   font-size: 0.875rem;
@@ -854,6 +863,18 @@ input {
   right: var(--spacing-lg);
   top: 50%;
   transform: translateY(-50%);
+}
+.transactions .page-buttons-container,
+.transactions .page-buttons {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.transactions .page-buttons-container {
+  padding-top: var(--spacing-xl);
+}
+.transactions .page-buttons {
+  gap: var(--spacing-xs);
 }
 
 @media (min-width: 48rem) {
