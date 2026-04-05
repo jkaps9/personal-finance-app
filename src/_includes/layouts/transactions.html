@@ -123,14 +123,19 @@
           {% endfor %}
         </ul>
 
-        <div class="page-buttons">
+        <div class="page-buttons-container">
           <button
             id="previous"
             class="btn btn--pagination"
           >
             {% include "svgs/icon-caret-left.svg" %} Prev
           </button>
-          <!-- TODO -->
+          <div class="page-buttons">
+            {% set pageCount = collections.transactions.length/10 %}
+            {% for i in range(0, pageCount|round) %}
+              <button class="btn btn--pagination">{{ i+1 }}</button>
+            {% endfor %}
+          </div>
           <button
             id="next"
             class="btn btn--pagination"
