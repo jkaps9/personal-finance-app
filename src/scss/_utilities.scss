@@ -130,6 +130,7 @@
   &__btn {
     background: none;
     border: none;
+    cursor: pointer;
     & > * {
       display: none;
     }
@@ -141,6 +142,19 @@
         width: 100%;
         height: auto;
       }
+    }
+
+    &::after {
+      //needed to maintain hover state when going between button and menu
+      content: "";
+      cursor: pointer;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      height: var(--spacing-md); //must be same as menus top offset
+      background: transparent;
+      z-index: 1;
     }
   }
 
@@ -196,7 +210,6 @@
       background: variables.$white;
       border: 1px solid var(--border-color);
       border-radius: var(--spacing-xs);
-      cursor: pointer;
       display: flex;
       gap: var(--spacing-md);
       padding: var(--spacing-sm) var(--spacing-lg);
@@ -218,18 +231,6 @@
 
       &:hover svg {
         transform: rotateZ(-180deg);
-      }
-
-      &::after {
-        //needed to maintain hover state when going between button and menu
-        content: "";
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        height: var(--spacing-md); //must be same as menus top offset
-        background: transparent;
-        z-index: 1;
       }
     }
 
