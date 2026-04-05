@@ -73,6 +73,21 @@ input {
       }
     }
   }
+
+  .page-buttons-container,
+  .page-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-buttons-container {
+    padding-top: var(--spacing-xl);
+  }
+
+  .page-buttons {
+    gap: var(--spacing-xs);
+  }
 }
 
 @media (min-width: 48rem) {
