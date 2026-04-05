@@ -53,6 +53,15 @@
         variables.$red;
     }
   }
+
+  &--pagination {
+    align-items: center;
+    background: none;
+    border-color: var(--border-color);
+    display: inline-flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+  }
 }
 
 .btn--tertiary {
