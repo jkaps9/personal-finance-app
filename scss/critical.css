@@ -149,6 +149,17 @@ table {
   height: var(--spacing-xxxl);
   justify-content: center;
 }
+.btn--pagination:hover {
+  background: #98908b;
+  color: var(--text-color-light);
+}
+.btn--pagination:hover svg * {
+  fill: var(--text-color-light);
+}
+.btn--pagination.active {
+  background: var(--bg-color-dark);
+  color: var(--text-color-light);
+}
 
 .btn--tertiary {
   font-size: 0.875rem;
@@ -875,6 +886,9 @@ input {
 }
 .transactions .page-buttons {
   gap: var(--spacing-xs);
+}
+.transactions .page-buttons .btn--pagination {
+  max-width: var(--spacing-xxxl);
 }
 
 @media (min-width: 48rem) {
