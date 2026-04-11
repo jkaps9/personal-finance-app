@@ -235,6 +235,11 @@ table {
   color: #696868;
 }
 
+.divider {
+  height: 1px;
+  background-color: #f2f2f2;
+}
+
 .dropdown-container {
   align-items: center;
   display: flex;
@@ -276,8 +281,6 @@ table {
   z-index: 1;
 }
 .dropdown__divider {
-  background: #f2f2f2;
-  height: 1px;
   width: 100%;
 }
 .dropdown__menu {
@@ -582,10 +585,6 @@ main#overview .right {
   align-items: center;
   display: flex;
   justify-content: space-between;
-}
-.transaction-list__divider {
-  height: 1px;
-  background-color: #f2f2f2;
 }
 .transaction-list__image-and-title {
   align-items: center;
@@ -954,6 +953,9 @@ input {
   .transactions .input-row .search-bar input {
     width: 100%;
   }
+}
+.budgets .spending-summary h2 {
+  margin-bottom: 1.25em;
 }
 .budgets .budget-container {
   grid-template-columns: 1fr;
