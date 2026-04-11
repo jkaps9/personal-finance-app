@@ -29,7 +29,7 @@
               <p
                 class="value {% if transaction.amount > 0 %}positive{% endif %}"
               >
-                {{ transaction.amount | amount }}
+                {{ transaction.amount | amountWithSign }}
               </p>
               <p class="date">{{ transaction.date | readableDate }}</p>
             </div>

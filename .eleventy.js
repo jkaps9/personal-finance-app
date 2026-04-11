@@ -48,7 +48,7 @@ export default function (config) {
   });
 
   // add amount filter
-  config.addFilter("amount", (amountObj) => {
+  config.addFilter("amountWithSign", (amountObj) => {
     if (amountObj >= 0) {
       return `+$${amountObj.toFixed(2)}`;
     } else {
