@@ -414,6 +414,7 @@ main#overview {
       flex-direction: column;
       height: 100%;
       margin: 0;
+      max-height: 100vh;
       min-width: 300px;
       padding: 0 var(--spacing-xl) 0 0;
 
