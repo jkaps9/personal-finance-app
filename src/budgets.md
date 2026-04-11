@@ -1,4 +1,4 @@
 ---
-title: "Overview"
+title: "Budgets"
 layout: "layouts/budgets.html"
 ---
