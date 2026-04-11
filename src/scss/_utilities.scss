@@ -149,6 +149,11 @@
   color: variables.$grey-500;
 }
 
+.divider {
+  height: 1px;
+  background-color: variables.$grey-100;
+}
+
 .dropdown {
   &-container {
     align-items: center;
@@ -194,8 +199,6 @@
   }
 
   &__divider {
-    background: variables.$grey-100;
-    height: 1px;
     width: 100%;
   }
 

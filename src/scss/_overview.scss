@@ -269,11 +269,6 @@ main#overview {
     justify-content: space-between;
   }
 
-  &__divider {
-    height: 1px;
-    background-color: variables.$grey-100;
-  }
-
   &__image-and-title {
     align-items: center;
     display: flex;
