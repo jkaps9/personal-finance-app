@@ -102,6 +102,13 @@ table {
   width: var(--container-width);
 }
 
+.row {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .accent-text {
   color: var(--accent-color);
 }
