@@ -303,23 +303,21 @@ main#overview {
   }
 }
 
-.overview-budgets {
-  .chart {
-    position: relative;
-    p {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+.chart {
+  position: relative;
+  p {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
+}
 
-  .budgets-container {
-    padding: var(--spacing-xs) 0;
-  }
+.budgets-container {
+  padding: var(--spacing-xs) 0;
 }
 
 .overview-recurring {
@@ -567,11 +565,10 @@ main#overview {
       display: flex;
       height: 100%;
     }
-
-    .budgets-container {
-      align-items: center;
-      flex: 1;
-      gap: var(--spacing-md);
-    }
+  }
+  .budgets-container {
+    align-items: center;
+    flex: 1;
+    gap: var(--spacing-md);
   }
 }
