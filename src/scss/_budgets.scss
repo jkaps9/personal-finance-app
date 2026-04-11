@@ -1,4 +1,9 @@
 .budgets {
+  .spending-summary {
+    h2 {
+      margin-bottom: 1.25em;
+    }
+  }
   .budget-container {
     grid-template-columns: 1fr;
   }
