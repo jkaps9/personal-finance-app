@@ -954,15 +954,23 @@ input {
     width: 100%;
   }
 }
-.budgets .spending-summary h2 {
+.budget-summary .spending-summary h2 {
   margin-bottom: 1.25em;
 }
-.budgets .budget-container {
+.budget-summary .budget-container {
   grid-template-columns: 1fr;
 }
-.budgets .budget {
+.budget-summary .budget {
   flex-direction: row;
 }
-.budgets .budget .light-text {
+.budget-summary .budget .light-text {
   padding-left: 0.5em;
+}
+
+.budget-card .budget-color {
+  border-radius: 100vh;
+  flex-shrink: 0;
+  height: var(--spacing-md);
+  margin-right: var(--spacing-md);
+  width: var(--spacing-md);
 }
