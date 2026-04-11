@@ -144,6 +144,11 @@
   @include fonts.textpreset1;
 }
 
+.light-text {
+  @include fonts.textpreset5;
+  color: variables.$grey-500;
+}
+
 .dropdown {
   &-container {
     align-items: center;

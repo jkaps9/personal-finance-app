@@ -1,0 +1,12 @@
+.budgets {
+  .budget-container {
+    grid-template-columns: 1fr;
+  }
+
+  .budget {
+    flex-direction: row;
+    .light-text {
+      padding-left: 0.5em;
+    }
+  }
+}
