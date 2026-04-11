@@ -967,7 +967,7 @@ input {
   padding-left: 0.5em;
 }
 
-.budget-card .budget-color {
+.budget-cards .budget-color {
   border-radius: 100vh;
   flex-shrink: 0;
   height: var(--spacing-md);
