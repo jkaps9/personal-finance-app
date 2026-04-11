@@ -6,7 +6,15 @@
         <h1>{{ title }}</h1>
         <button class="btn btn--primary">+ Add New Budget</button>
       </div>
-      <div class="card"></div>
+      <div class="card spending-summary budgets-container">
+        <div class="chart">
+          <canvas id="budget-chart"></canvas>
+          <p>
+            <span class="large-text">$338</span>
+            of $975 limit
+          </p>
+        </div>
+      </div>
     </div>
   </section>
   Overview Transactions Budgets Pots Recurring Bills Minimize Menu Budgets Add
@@ -34,4 +42,35 @@
   Go Back
 
   <!-- Delete budget end -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer>
+    const ctx = document.getElementById("budget-chart");
+
+    const data = {
+      labels: ["Entertainment", "Bills", "Dining Out", "Personal Care"],
+      datasets: [
+        {
+          data: [50, 750, 75, 100],
+          backgroundColor: ["#277c78", "#82c9d7", "#f2cdac", "#626070"],
+          hoverOffset: 4,
+        },
+      ],
+    };
+
+    const config = {
+      type: "doughnut",
+      data: data,
+      options: {
+        cutout: "65%",
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    };
+
+    new Chart(ctx, config);
+  </script>
 {% endblock %}
