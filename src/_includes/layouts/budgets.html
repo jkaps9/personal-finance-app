@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 {% block content %}
-  <section class="budgets">
+  <section class="budget-summary">
     <div class="container">
       <div class="row">
         <h1>{{ title }}</h1>
@@ -67,6 +67,27 @@
       </div>
     </div>
   </section>
+
+  {% for budget in data.budgets %}
+    <section class="budget-card">
+      <div class="container">
+        <div class="card">
+          <div class="card__title-row">
+            <div class="row">
+              <div
+                class="budget-color"
+                style="background-color:{{ budget.theme }};"
+              ></div>
+              <h2 class="section-title">{{ budget.category }}</h2>
+            </div>
+            <button class="btn--tertiary">
+              {% include "svgs/icon-ellipsis.svg" %}
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endfor %}
   Overview Transactions Budgets Pots Recurring Bills Minimize Menu Budgets Add
   New Budget
 

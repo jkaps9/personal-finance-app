@@ -1,4 +1,4 @@
-.budgets {
+.budget-summary {
   .spending-summary {
     h2 {
       margin-bottom: 1.25em;
@@ -13,5 +13,15 @@
     .light-text {
       padding-left: 0.5em;
     }
+  }
+}
+
+.budget-card {
+  .budget-color {
+    border-radius: 100vh;
+    flex-shrink: 0;
+    height: var(--spacing-md);
+    margin-right: var(--spacing-md);
+    width: var(--spacing-md);
   }
 }
