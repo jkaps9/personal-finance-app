@@ -57,6 +57,11 @@ export default function (config) {
     }
   });
 
+  // add amount filter
+  config.addFilter("amount", (amountObj) => {
+    return `$${amountObj.toFixed(2)}`;
+  });
+
   // add collections
   config.addCollection("transactions", async (collectionsApi) => {
     const allGlobalData = collectionsApi.getAll()[0].data;

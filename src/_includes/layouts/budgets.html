@@ -68,9 +68,9 @@
     </div>
   </section>
 
-  {% for budget in data.budgets %}
-    <section class="budget-card">
-      <div class="container">
+  <section class="budget-cards">
+    <div class="container">
+      {% for budget in data.budgets %}
         <div class="card">
           <div class="card__title-row">
             <div class="row">
@@ -80,18 +80,15 @@
               ></div>
               <h2 class="section-title">{{ budget.category }}</h2>
             </div>
+            <p>Maximum of {{ budget.maximum | amount }}</p>
             <button class="btn--tertiary">
               {% include "svgs/icon-ellipsis.svg" %}
             </button>
           </div>
         </div>
-      </div>
-    </section>
-  {% endfor %}
-  Overview Transactions Budgets Pots Recurring Bills Minimize Menu Budgets Add
-  New Budget
-
-  <!-- Add budget data -->
+      {% endfor %}
+    </div>
+  </section>
 
   <!-- Add/Edit budget start -->
 
