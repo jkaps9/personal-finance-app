@@ -228,6 +228,13 @@ table {
   line-height: 1.2;
 }
 
+.light-text {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #696868;
+}
+
 .dropdown-container {
   align-items: center;
   display: flex;
@@ -607,10 +614,10 @@ main#overview .right {
   color: #696868;
 }
 
-.overview-budgets .chart {
+.chart {
   position: relative;
 }
-.overview-budgets .chart p {
+.chart p {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -619,7 +626,8 @@ main#overview .right {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.overview-budgets .budgets-container {
+
+.budgets-container {
   padding: var(--spacing-xs) 0;
 }
 
@@ -815,7 +823,7 @@ main#overview .right {
     display: flex;
     height: 100%;
   }
-  .overview-budgets .budgets-container {
+  .budgets-container {
     align-items: center;
     flex: 1;
     gap: var(--spacing-md);
@@ -946,4 +954,13 @@ input {
   .transactions .input-row .search-bar input {
     width: 100%;
   }
+}
+.budgets .budget-container {
+  grid-template-columns: 1fr;
+}
+.budgets .budget {
+  flex-direction: row;
+}
+.budgets .budget .light-text {
+  padding-left: 0.5em;
 }
