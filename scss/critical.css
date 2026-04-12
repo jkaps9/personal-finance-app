@@ -1123,6 +1123,9 @@ main#pots .title-row {
 .bills-list__date, .bills-list__value-and-date {
   grid-row: 2;
 }
+.bills-list__value-and-date {
+  justify-self: end;
+}
 
 .bills-card {
   gap: var(--spacing-xl);
@@ -1139,6 +1142,36 @@ main#pots .title-row {
   display: none;
 }
 
+.bills-list__date {
+  align-items: center;
+  justify-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-xs);
+}
+.bills-list__date .paid-icon,
+.bills-list__date .due-soon-icon {
+  display: none;
+}
+.bills-list__date.red .due-soon-icon {
+  display: block;
+}
+.bills-list__date.green {
+  color: #277c78;
+}
+.bills-list__date.green .paid-icon {
+  display: block;
+}
+.bills-list__date p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.bills-list__date.red + .bills-list__value-and-date {
+  color: #c94736;
+}
+
 @media (min-width: 48rem) {
   .bills-list__headers,
   .bills-list__divider.first-divider {
@@ -1150,7 +1183,7 @@ main#pots .title-row {
   }
   .bills-list__item {
     gap: var(--spacing-xxl);
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 3fr 1fr 1fr;
     justify-items: start;
   }
   .bills-list__date, .bills-list__value-and-date {
