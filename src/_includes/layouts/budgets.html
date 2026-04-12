@@ -125,7 +125,30 @@
             </div>
             <ul class="transaction-list">
               {% for transaction in collections.transactions | categoryFilter(budget.category) %}
-                {{ transaction.category }}
+                <li class="transaction-list__item">
+                  <div class="transaction-list__image-and-title">
+                    <div class="transaction-list__image">
+                      <img
+                        src="{{ '../' + transaction.avatar | url }}"
+                        alt="{{ transaction.name }} avatar"
+                      />
+                    </div>
+                    <p class="transaction-list__description">
+                      {{ transaction.name }}
+                    </p>
+                  </div>
+                  <div class="transaction-list__value-and-date">
+                    <p
+                      class="value {% if transaction.amount > 0 %}positive{% endif %}"
+                    >
+                      {{ transaction.amount | amountWithSign }}
+                    </p>
+                    <p class="date">{{ transaction.date | readableDate }}</p>
+                  </div>
+                </li>
+                {% if not loop.last %}
+                  <li class="divider"></li>
+                {% endif %}
               {% endfor %}
             </ul>
           </div>
