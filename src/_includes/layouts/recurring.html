@@ -1,16 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "layouts/base.html" %}
+{% block content %}
+  <section class="recurring-bills">
+    <div class="container">
+      <h1>{{ title }}</h1>
+      <div class="card-container">
+        <div class="card dark-bg">
+          <div class="icon">{% include "svgs/icon-recurring-bills.svg" %}</div>
+          <div class="content">
+            <h3>Total bills</h3>
+            <p class="large-text">$384.98</p>
+          </div>
+        </div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Personal finance app - Recurring bills</title>
-</head>
-<body>
+        <div class="card">
+          <h2>Summary</h2>
+          <div class="row">
+            <p class="light-text">Paid Bills</p>
+            <p>2 ({{ '320' | int | amount }})</p>
+          </div>
+          <div class="divider"></div>
+          <div class="row">
+            <p class="light-text">Total Upcoming</p>
+            <p>6 ({{ '1230' | int | amount }})</p>
+          </div>
+          <div class="divider"></div>
+          <div class="row">
+            <p class="light-text red-text">Due Soon</p>
+            <p class="red-text">2 ({{ '320' | int | amount }})</p>
+          </div>
+        </div>
 
-  Overview
+        <div class="card">
+          <div class="input-row">
+            <!-- TODO: make search functional -->
+            <div class="search-bar">
+              <input
+                type="search"
+                placeholder="Search bills"
+                id="bills-search"
+              />
+              {% include "svgs/icon-search.svg" %}
+            </div>
+            <div class="dropdown-container">
+              <!-- TODO: #4 make sort functional -->
+              <p class="dropdown__label">Sort by</p>
+              <div class="dropdown">
+                <button class="dropdown__btn">
+                  <span>Latest</span>
+                  {% include "svgs/icon-caret-down.svg" %}
+                  <div class="mobile-icon">
+                    {% include "svgs/icon-sort-mobile.svg" %}
+                  </div>
+                </button>
+                <div class="dropdown__menu">
+                  <div class="dropdown__option selected">Latest</div>
+                  <div class="dropdown__divider divider"></div>
+                  <div class="dropdown__option">Oldest</div>
+                  <div class="dropdown__divider divider"></div>
+                  <div class="dropdown__option">A to Z</div>
+                  <div class="dropdown__divider divider"></div>
+                  <div class="dropdown__option">Z to A</div>
+                  <div class="dropdown__divider divider"></div>
+                  <div class="dropdown__option">Highest</div>
+                  <div class="dropdown__divider divider"></div>
+                  <div class="dropdown__option">Lowest</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="bills-list">
+            <li class="bills-list__headers bills-list__item">
+              <p class="bills-list__header">Bill Title</p>
+              <p class="bills-list__header">Due Date</p>
+              <p class="bills-list__header">Amount</p>
+            </li>
+            <li class="bills-list__divider first-divider"></li>
+
+            {% for transaction in collections.transactions | selectattr("recurring") %}
+              <li class="bills-list__item">
+                <div class="bills-list__image-and-title">
+                  <div class="bills-list__image">
+                    <img
+                      src="{{ '../' + transaction.avatar | url }}"
+                      alt="{{ transaction.name }} avatar"
+                    />
+                  </div>
+                  <div class="text">
+                    <p class="bills-list__description">
+                      {{ transaction.name }}
+                    </p>
+                  </div>
+                </div>
+
+                <p class="bills-list__date date">
+                  Monthly-{{ transaction.date | readableDate }}
+                </p>
+
+                <div class="bills-list__value-and-date">
+                  <p class="value">{{ (transaction.amount * -1) | amount }}</p>
+                </div>
+              </li>
+              {% if not loop.last %}
+                <li class="bills-list__divider divider"></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+<!-- Overview
   Transactions
   Budgets
   Pots
@@ -35,9 +137,6 @@
   A to Z
   Z to A
   Highest
-  Lowest
+  Lowest -->
 
-  <!-- Add bills data -->
-
-</body>
-</html>
+<!-- Add bills data -->
