@@ -13,7 +13,8 @@
     grid-row: 2;
   }
 
-  &__value-and-date {
+  &__value-and-date,
+  .right-align {
     justify-self: end;
   }
 }
