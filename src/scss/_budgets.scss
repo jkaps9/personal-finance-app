@@ -64,6 +64,20 @@
     h3 {
       @include fonts.textpreset3;
     }
+
+    .transaction-list__image {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  .budget-cards {
+    .budget__transactions {
+      .transaction-list__image {
+        display: block;
+      }
+    }
   }
 }
 
