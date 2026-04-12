@@ -1,0 +1,58 @@
+@use "fonts";
+@use "variables";
+
+.bills-list {
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: var(--spacing-xs);
+  }
+
+  &__date,
+  &__value-and-date {
+    grid-row: 2;
+  }
+}
+
+.bills-card {
+  gap: var(--spacing-xl);
+}
+
+.bills-list__headers,
+.bills-list__divider.first-divider {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .bills-list__headers,
+  .bills-list__divider.first-divider {
+    display: grid;
+  }
+
+  .bills-list {
+    &__item {
+      gap: var(--spacing-xxl);
+      grid-template-columns: 1fr auto auto;
+      justify-items: start;
+    }
+
+    &__date,
+    &__value-and-date {
+      grid-row: 1;
+    }
+
+    &__image-and-title {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+
+  .recurring-bills .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .bills-card {
+      grid-column: 1 / -1;
+    }
+  }
+}
