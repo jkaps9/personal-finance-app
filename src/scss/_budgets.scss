@@ -22,11 +22,13 @@
   }
 }
 
-.budget-cards > .container > .card {
+.budget-cards > .container > .card,
+.pots-cards > .container > .card {
   row-gap: var(--spacing-lg);
 }
 
-.budget-cards {
+.budget-cards,
+.pots-cards {
   .container {
     display: grid;
     gap: var(--spacing-lg);

@@ -1,5 +1,55 @@
 {% extends "layouts/base.html" %}
 {% block content %}
+  <section class="title-row">
+    <div class="container row">
+      <h1>{{ title }}</h1>
+      <button class="btn btn--primary">+ Add New Budget</button>
+    </div>
+  </section>
+
+  <section class="pots-cards">
+    <div class="container">
+      {% for pot in data.pots %}
+        <div class="card">
+          <div class="card__title-row">
+            <div class="row">
+              <div
+                class="budget-color"
+                style="background-color:{{ pot.theme }};"
+              ></div>
+              <h2 class="section-title">{{ pot.name }}</h2>
+            </div>
+            <button class="btn--tertiary">
+              {% include "svgs/icon-ellipsis.svg" %}
+            </button>
+          </div>
+          <div class="row">
+            <p class="light-text">Total Saved</p>
+            <p class="large-text">{{ pot.total | amount }}</p>
+          </div>
+          <div>
+            <div class="pot__bar">
+              <div
+                class="pot__bar__saved"
+                style="width: {{ 100 * (pot.total | int / pot.target | int) }}%; background-color:{{ pot.theme }};"
+              ></div>
+            </div>
+            <div class="row">
+              <p class="percentage">
+                <!-- TODO: add custom filter for rounding -->
+                {{ (100 * (pot.total | int / pot.target | int)) | round(2) }}%
+              </p>
+              <p class="light-text">Target of {{ pot.target | amount }}</p>
+            </div>
+          </div>
+          <div class="pots__buttons row">
+            <button class="btn btn--secondary">+ Add Money</button>
+            <button class="btn btn--secondary">Withdraw</button>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
 {% endblock %}
 <!-- 
 
