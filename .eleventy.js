@@ -47,6 +47,27 @@ export default function (config) {
     return DateTime.fromISO(dateObj).toLocaleString(DateTime.DATE_MED);
   });
 
+  config.addFilter("dayOfMonth", (dateObj) => {
+    const day = DateTime.fromISO(dateObj).day.toString();
+    const suffices = [
+      "th",
+      "st",
+      "nd",
+      "rd",
+      "th",
+      "th",
+      "th",
+      "th",
+      "th",
+      "th",
+    ];
+    let suffix = suffices[day.substring(day.length - 1)];
+    if (day > 10 && day < 20) {
+      suffix = "th";
+    }
+    return day + suffix;
+  });
+
   // add amount filter
   config.addFilter("amountWithSign", (amountObj) => {
     if (amountObj >= 0) {
@@ -74,6 +95,15 @@ export default function (config) {
     const allGlobalData = collectionsApi.getAll()[0].data;
     return allGlobalData.data.transactions.sort(function (a, b) {
       return b.date - a.date;
+    });
+  });
+
+  config.addCollection("recurring", async (collectionsApi) => {
+    const allGlobalData = collectionsApi.getAll()[0].data;
+    return allGlobalData.data.transactions.sort(function (a, b) {
+      const dayA = DateTime.fromISO(a.date);
+      const dayB = DateTime.fromISO(b.date);
+      return dayA.day - dayB.day;
     });
   });
 

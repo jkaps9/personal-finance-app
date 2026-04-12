@@ -80,7 +80,7 @@
             </li>
             <li class="bills-list__divider first-divider"></li>
 
-            {% for transaction in collections.transactions | selectattr("recurring") %}
+            {% for transaction in collections.recurring | selectattr("recurring") %}
               <li class="bills-list__item">
                 <div class="bills-list__image-and-title">
                   <div class="bills-list__image">
@@ -97,11 +97,13 @@
                 </div>
 
                 <p class="bills-list__date date">
-                  Monthly-{{ transaction.date | readableDate }}
+                  Monthly-{{ transaction.date | dayOfMonth }}
                 </p>
 
                 <div class="bills-list__value-and-date">
-                  <p class="value">{{ (transaction.amount * -1) | amount }}</p>
+                  <p class="value">
+                    ${{ (transaction.amount * -1) | amountWithDecimals(2) }}
+                  </p>
                 </div>
               </li>
               {% if not loop.last %}
