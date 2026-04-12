@@ -336,6 +336,14 @@ table {
   transform: translateY(-50%);
 }
 
+.hide-on-mobile {
+  display: none;
+}
+
+.show-on-mobile {
+  display: flex;
+}
+
 @media (min-width: 48rem) {
   .card-container {
     flex-direction: row;
@@ -376,6 +384,12 @@ table {
   }
   .dropdown__menu {
     left: 0;
+  }
+  .hide-on-mobile {
+    display: flex;
+  }
+  .show-on-mobile {
+    display: none;
   }
 }
 :root {
