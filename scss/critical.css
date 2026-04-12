@@ -1000,6 +1000,15 @@ input {
 .budget-cards .budget__spent-remaining > * {
   flex: 1;
 }
+.budget-cards .budget__transactions {
+  background-color: #f8f4f0;
+  padding: var(--spacing-md);
+}
+.budget-cards .budget__transactions h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
 
 @media (min-width: 64rem) {
   main#budgets {
