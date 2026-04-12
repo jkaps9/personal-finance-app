@@ -94,12 +94,24 @@ export default function (config) {
     );
   });
 
-  // add collections
-  config.addCollection("transactions", async (collectionsApi) => {
-    const allGlobalData = collectionsApi.getAll()[0].data;
-    return allGlobalData.data.transactions.sort(function (a, b) {
-      return b.date - a.date;
-    });
+  // add collectionss
+  config.addCollection("transactions", (collectionsApi) => {
+    // 1. Grab the data cascadee
+    const itemData = collectionsApi.getAll()[0]?.data;
+
+    // 2. Safely locate the transactions array (checking b the possible paths)
+    const transactionsList =
+      itemData?.transactions || itemData?.data?.transactions;
+
+    // 3. If no data is found, return an empty array to prevent build crashes
+    if (!transactionsList || !Array.isArray(transactionsList)) {
+      console.warn("Could not find transactions array in global data.");
+      return [];
+    }
+
+    // 4. Spread into a new array [...] to prevent mutating the original,
+    // and sort descending using string comparison.
+    return [...transactionsList].sort((a, b) => b.date.localeCompare(a.date));
   });
 
   config.addCollection("recurring", async (collectionsApi) => {
