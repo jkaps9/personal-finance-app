@@ -1123,7 +1123,8 @@ main#pots .title-row {
 .bills-list__date, .bills-list__value-and-date {
   grid-row: 2;
 }
-.bills-list__value-and-date {
+.bills-list__value-and-date,
+.bills-list .right-align {
   justify-self: end;
 }
 
