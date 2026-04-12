@@ -954,6 +954,9 @@ input {
     width: 100%;
   }
 }
+.budget-summary .card {
+  margin: var(--spacing-xxl) 0 var(--spacing-lg);
+}
 .budget-summary .spending-summary h2 {
   margin-bottom: 1.25em;
 }
@@ -967,10 +970,47 @@ input {
   padding-left: 0.5em;
 }
 
+.budget-cards .container {
+  display: grid;
+  gap: var(--spacing-lg);
+}
 .budget-cards .budget-color {
   border-radius: 100vh;
   flex-shrink: 0;
   height: var(--spacing-md);
   margin-right: var(--spacing-md);
   width: var(--spacing-md);
+}
+.budget-cards .budget__bar {
+  background-color: #f8f4f0;
+  border-radius: var(--spacing-xxs);
+  height: var(--spacing-xxl);
+  position: relative;
+}
+.budget-cards .budget__bar__spent {
+  border-radius: var(--spacing-xxs);
+  position: absolute;
+  top: var(--spacing-xxs);
+  left: var(--spacing-xxs);
+  bottom: var(--spacing-xxs);
+}
+.budget-cards .budget__spent-remaining {
+  justify-content: flex-start;
+}
+.budget-cards .budget__spent-remaining > * {
+  flex: 1;
+}
+
+@media (min-width: 64rem) {
+  main#budgets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xxl) var(--spacing-lg);
+  }
+  main#budgets .title-row {
+    grid-column: 1/-1;
+  }
+  main#budgets .budget-summary .card {
+    margin: 0;
+  }
 }
