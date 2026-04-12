@@ -105,6 +105,12 @@
       .card {
         margin: 0;
       }
+
+      .budgets-container {
+        align-items: stretch;
+        flex-direction: column;
+        gap: var(--spacing-xxl);
+      }
     }
   }
 }
