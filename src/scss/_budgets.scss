@@ -22,9 +22,12 @@
   }
 }
 
-.budget-cards > .container > .card,
-.pots-cards > .container > .card {
+.budget-cards > .container > .card {
   row-gap: var(--spacing-lg);
+}
+
+.pots-cards > .container > .card {
+  gap: var(--spacing-xxl);
 }
 
 .budget-cards,
@@ -41,19 +44,36 @@
     width: var(--spacing-md);
   }
 
-  .budget__bar {
+  .budget__bar,
+  .pot__bar {
     background-color: variables.$biege-100;
     border-radius: var(--spacing-xxs);
     height: var(--spacing-xxl);
     margin: calc(-1 * var(--spacing-xxs)) 0;
     position: relative;
 
-    &__spent {
+    &__spent,
+    &__saved {
       border-radius: var(--spacing-xxs);
       position: absolute;
       top: var(--spacing-xxs);
       left: var(--spacing-xxs);
       bottom: var(--spacing-xxs);
+    }
+  }
+
+  .pot__bar {
+    height: var(--spacing-xs);
+    margin: calc(-1 * var(--spacing-md)) 0 var(--spacing-sm);
+    &__saved {
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
+
+    & + .row > .percentage {
+      color: variables.$grey-500;
+      font-weight: 700;
     }
   }
 
@@ -83,6 +103,20 @@
   }
 }
 
+.pots__buttons {
+  align-items: stretch;
+  gap: var(--spacing-md);
+  .btn {
+    flex: 1;
+  }
+}
+
+main#pots {
+  .title-row {
+    margin-bottom: var(--spacing-xxl);
+  }
+}
+
 @media (min-width: 48rem) {
   .budget-cards {
     .budget__transactions {
@@ -94,7 +128,8 @@
 }
 
 @media (min-width: 64rem) {
-  main#budgets {
+  main#budgets,
+  .pots-cards > .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-xxl) var(--spacing-lg);
