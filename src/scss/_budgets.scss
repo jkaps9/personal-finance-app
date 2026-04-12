@@ -1,6 +1,9 @@
 @use "variables";
 
 .budget-summary {
+  .card {
+    margin: var(--spacing-xxl) 0 var(--spacing-lg);
+  }
   .spending-summary {
     h2 {
       margin-bottom: 1.25em;
@@ -19,6 +22,10 @@
 }
 
 .budget-cards {
+  .container {
+    display: grid;
+    gap: var(--spacing-lg);
+  }
   .budget-color {
     border-radius: 100vh;
     flex-shrink: 0;
@@ -40,5 +47,12 @@
       left: var(--spacing-xxs);
       bottom: var(--spacing-xxs);
     }
+  }
+}
+
+@media (min-width: 64rem) {
+  main#budgets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
