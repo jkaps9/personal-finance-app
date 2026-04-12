@@ -70,6 +70,11 @@ export default function (config) {
     });
   });
 
+  // add category filter
+  config.addFilter("categoryFilter", function (collection, category) {
+    return collection.filter((item) => item.category === category);
+  });
+
   return {
     pathPrefix:
       process.env.NODE_ENV === "production" ? "/personal-finance-app/" : "/",

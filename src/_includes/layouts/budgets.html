@@ -112,6 +112,23 @@
               <p>$25.00</p>
             </div>
           </div>
+          <div class="card budget__transactions">
+            <div class="card__title-row">
+              <h3 class="section-title">Latest Spending</h3>
+              <a
+                href="{{ '/transactions/' | url }}"
+                class="btn--tertiary"
+              >
+                <span>See All</span>
+                {% include "svgs/icon-caret-right.svg" %}
+              </a>
+            </div>
+            <ul class="transaction-list">
+              {% for transaction in collections.transactions | categoryFilter(budget.category) %}
+                {{ transaction.category }}
+              {% endfor %}
+            </ul>
+          </div>
         </div>
       {% endfor %}
     </div>

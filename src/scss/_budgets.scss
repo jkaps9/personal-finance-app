@@ -1,3 +1,4 @@
+@use "fonts";
 @use "variables";
 
 .budget-summary {
@@ -54,6 +55,14 @@
 
     & > * {
       flex: 1;
+    }
+  }
+
+  .budget__transactions {
+    background-color: variables.$biege-100;
+    padding: var(--spacing-md);
+    h3 {
+      @include fonts.textpreset3;
     }
   }
 }
