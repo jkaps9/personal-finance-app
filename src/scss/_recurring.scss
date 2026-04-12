@@ -60,6 +60,10 @@
   }
 }
 
+.bills-list__date.red + .bills-list__value-and-date {
+  color: variables.$red;
+}
+
 // TODO: align headers with content
 // TODO: style due dates
 
