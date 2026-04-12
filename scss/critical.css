@@ -970,54 +970,65 @@ input {
   padding-left: 0.5em;
 }
 
-.budget-cards > .container > .card {
+.budget-cards > .container > .card,
+.pots-cards > .container > .card {
   row-gap: var(--spacing-lg);
 }
 
-.budget-cards .container {
+.budget-cards .container,
+.pots-cards .container {
   display: grid;
   gap: var(--spacing-lg);
 }
-.budget-cards .budget-color {
+.budget-cards .budget-color,
+.pots-cards .budget-color {
   border-radius: 100vh;
   flex-shrink: 0;
   height: var(--spacing-md);
   margin-right: var(--spacing-md);
   width: var(--spacing-md);
 }
-.budget-cards .budget__bar {
+.budget-cards .budget__bar,
+.pots-cards .budget__bar {
   background-color: #f8f4f0;
   border-radius: var(--spacing-xxs);
   height: var(--spacing-xxl);
   margin: calc(-1 * var(--spacing-xxs)) 0;
   position: relative;
 }
-.budget-cards .budget__bar__spent {
+.budget-cards .budget__bar__spent,
+.pots-cards .budget__bar__spent {
   border-radius: var(--spacing-xxs);
   position: absolute;
   top: var(--spacing-xxs);
   left: var(--spacing-xxs);
   bottom: var(--spacing-xxs);
 }
-.budget-cards .budget__spent-remaining {
+.budget-cards .budget__spent-remaining,
+.pots-cards .budget__spent-remaining {
   justify-content: flex-start;
 }
-.budget-cards .budget__spent-remaining > * {
+.budget-cards .budget__spent-remaining > *,
+.pots-cards .budget__spent-remaining > * {
   flex: 1;
 }
-.budget-cards .budget__transactions {
+.budget-cards .budget__transactions,
+.pots-cards .budget__transactions {
   background-color: #f8f4f0;
   padding: var(--spacing-md);
 }
-.budget-cards .budget__transactions h3 {
+.budget-cards .budget__transactions h3,
+.pots-cards .budget__transactions h3 {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
 }
-.budget-cards .budget__transactions .transaction-list__image {
+.budget-cards .budget__transactions .transaction-list__image,
+.pots-cards .budget__transactions .transaction-list__image {
   display: none;
 }
-.budget-cards .budget__transactions .divider {
+.budget-cards .budget__transactions .divider,
+.pots-cards .budget__transactions .divider {
   background-color: #696868;
   opacity: 0.15;
 }
