@@ -104,10 +104,22 @@ export default function (config) {
 
   config.addCollection("recurring", async (collectionsApi) => {
     const allGlobalData = collectionsApi.getAll()[0].data;
-    return allGlobalData.data.transactions.sort(function (a, b) {
+    const transactions = allGlobalData.data.transactions;
+
+    const sorted = transactions.sort(function (a, b) {
       const dayA = DateTime.fromISO(a.date);
       const dayB = DateTime.fromISO(b.date);
       return dayA.day - dayB.day;
+    });
+
+    const sortedSet = new Set();
+    return sorted.filter((item) => {
+      if (sortedSet.has(item.name)) {
+        return false;
+      } else {
+        sortedSet.add(item.name);
+        return true;
+      }
     });
   });
 
