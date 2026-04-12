@@ -96,9 +96,17 @@
                   </div>
                 </div>
 
-                <p class="bills-list__date date">
-                  Monthly-{{ transaction.date | dayOfMonth }}
-                </p>
+                <div
+                  class="bills-list__date {% if transaction.date |day < 21 %}green{% elseif transaction.date | day < 25 %}red{% endif %}"
+                >
+                  <p>Monthly-{{ transaction.date | dayOfMonth }}</p>
+                  <div class="paid-icon">
+                    {% include "svgs/icon-bill-paid.svg" %}
+                  </div>
+                  <div class="due-soon-icon">
+                    {% include "svgs/icon-bill-due.svg" %}
+                  </div>
+                </div>
 
                 <div class="bills-list__value-and-date">
                   <p class="value">

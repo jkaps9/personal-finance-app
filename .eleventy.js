@@ -68,6 +68,10 @@ export default function (config) {
     return day + suffix;
   });
 
+  config.addFilter("day", (dateObj) => {
+    return DateTime.fromISO(dateObj).day;
+  });
+
   // add amount filter
   config.addFilter("amountWithSign", (amountObj) => {
     if (amountObj >= 0) {

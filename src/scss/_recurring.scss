@@ -29,6 +29,27 @@
   display: none;
 }
 
+.bills-list__date {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-xs);
+  .paid-icon,
+  .due-soon-icon {
+    display: none;
+  }
+  &.red {
+    .due-soon-icon {
+      display: block;
+    }
+  }
+  &.green {
+    color: variables.$green;
+    .paid-icon {
+      display: block;
+    }
+  }
+}
+
 // TODO: align headers with content
 // TODO: style due dates
 
