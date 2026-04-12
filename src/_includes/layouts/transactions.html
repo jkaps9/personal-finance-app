@@ -137,9 +137,13 @@
           <div class="page-buttons">
             {% set pageCount = collections.transactions.length/10 %}
             {% for i in range(0, pageCount|round) %}
+            {% if i==1 %}
+<button class="btn btn--pagination show-on-mobile">
+              {% include "svgs/icon-ellipsis.svg" %}
+            </button>
+            {% endif %}
               <button
-                class="btn btn--pagination {% if i===0 %}active{% endif %}"
-              >
+                class="btn btn--pagination {% if i===0 %}active{% elseif i>0 and i<4%}hide-on-mobile{% endif %}" >
                 {{ i+1 }}
               </button>
             {% endfor %}
