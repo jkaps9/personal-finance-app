@@ -25,7 +25,7 @@
           </div>
           <div class="row">
             <p class="light-text">Total Saved</p>
-            <p class="large-text">{{ pot.total | amount }}</p>
+            <p class="large-text">${{ pot.total | amountWithDecimals(2) }}</p>
           </div>
           <div>
             <div class="pot__bar">
@@ -36,8 +36,7 @@
             </div>
             <div class="row">
               <p class="percentage">
-                <!-- TODO: add custom filter for rounding -->
-                {{ (100 * (pot.total | int / pot.target | int)) | round(2) }}%
+                {{ (100 * (pot.total | int / pot.target | int)) | amountWithDecimals(1) }}%
               </p>
               <p class="light-text">Target of {{ pot.target | amount }}</p>
             </div>

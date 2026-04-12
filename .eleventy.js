@@ -56,10 +56,17 @@ export default function (config) {
       return `-$${amount.toFixed(2)}`;
     }
   });
-
+  config.addFilter("amountWithDecimals", (amountObj, minimum) => {
+    return amountObj.toLocaleString("en-US", {
+      minimumFractionDigits: minimum,
+      maximumFractionDigits: 2,
+    });
+  });
   // add amount filter
   config.addFilter("amount", (amountObj) => {
-    return `$${amountObj.toFixed(2)}`;
+    return (
+      "$" + amountObj.toLocaleString("en-US", { maximumFractionDigits: 2 })
+    );
   });
 
   // add collections
