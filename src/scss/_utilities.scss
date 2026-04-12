@@ -150,6 +150,10 @@
   color: variables.$grey-500;
 }
 
+.red-text {
+  color: variables.$red;
+}
+
 .divider {
   height: 1px;
   background-color: variables.$grey-100;
@@ -226,6 +230,37 @@
   &__btn:hover + .dropdown__menu,
   &__menu:hover {
     display: flex;
+  }
+}
+
+.input-row {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-xl);
+  justify-content: flex-end;
+
+  .search-bar {
+    flex: 1;
+    position: relative;
+
+    input {
+      padding-right: calc(var(--spacing-lg) + calc(2 * var(--spacing-md)));
+      width: 100%;
+      color: red;
+    }
+
+    input::placeholder {
+      // TODO: fix textoverflow to elipsis
+      @include fonts.textpreset4;
+      color: variables.$biege-500;
+    }
+
+    svg {
+      position: absolute;
+      right: var(--spacing-lg);
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }
 
