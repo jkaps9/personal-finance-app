@@ -1,3 +1,5 @@
+@use "variables";
+
 .budget-summary {
   .spending-summary {
     h2 {
@@ -23,5 +25,20 @@
     height: var(--spacing-md);
     margin-right: var(--spacing-md);
     width: var(--spacing-md);
+  }
+
+  .budget__bar {
+    background-color: variables.$biege-100;
+    border-radius: var(--spacing-xxs);
+    height: var(--spacing-xxl);
+    position: relative;
+
+    &__spent {
+      border-radius: var(--spacing-xxs);
+      position: absolute;
+      top: var(--spacing-xxs);
+      left: var(--spacing-xxs);
+      bottom: var(--spacing-xxs);
+    }
   }
 }

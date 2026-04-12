@@ -80,10 +80,17 @@
               ></div>
               <h2 class="section-title">{{ budget.category }}</h2>
             </div>
-            <p>Maximum of {{ budget.maximum | amount }}</p>
             <button class="btn--tertiary">
               {% include "svgs/icon-ellipsis.svg" %}
             </button>
+          </div>
+          <p class="light-text">Maximum of {{ budget.maximum | amount }}</p>
+          <!-- TODO: set/calculate spending amount -->
+          <div class="budget__bar">
+            <div
+              class="budget__bar__spent"
+              style="width: {{ 100 * (25 / budget.maximum | int) }}%; background-color:{{ budget.theme }};"
+            ></div>
           </div>
         </div>
       {% endfor %}
