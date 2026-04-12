@@ -36,9 +36,7 @@
 
 .bills-list__date {
   align-items: center;
-  justify-self: stretch;
   display: flex;
-  justify-content: space-between;
   gap: var(--spacing-xs);
   .paid-icon,
   .due-soon-icon {
@@ -81,13 +79,18 @@
   .bills-list {
     &__item {
       gap: var(--spacing-xxl);
-      grid-template-columns: 3fr 1fr 1fr;
+      grid-template-columns: 4fr 1fr 2fr;
       justify-items: start;
     }
 
     &__date,
     &__value-and-date {
       grid-row: 1;
+    }
+
+    &__date {
+      justify-content: space-between;
+      justify-self: stretch;
     }
 
     &__image-and-title {
