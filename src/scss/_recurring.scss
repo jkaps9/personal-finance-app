@@ -12,6 +12,10 @@
   &__value-and-date {
     grid-row: 2;
   }
+
+  &__value-and-date {
+    justify-self: end;
+  }
 }
 
 .bills-card {
@@ -31,7 +35,9 @@
 
 .bills-list__date {
   align-items: center;
+  justify-self: stretch;
   display: flex;
+  justify-content: space-between;
   gap: var(--spacing-xs);
   .paid-icon,
   .due-soon-icon {
@@ -47,6 +53,10 @@
     .paid-icon {
       display: block;
     }
+  }
+
+  p {
+    @include fonts.textpreset5;
   }
 }
 
@@ -66,7 +76,7 @@
   .bills-list {
     &__item {
       gap: var(--spacing-xxl);
-      grid-template-columns: 1fr auto auto;
+      grid-template-columns: 3fr 1fr 1fr;
       justify-items: start;
     }
 
