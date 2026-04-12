@@ -1145,9 +1145,7 @@ main#pots .title-row {
 
 .bills-list__date {
   align-items: center;
-  justify-self: stretch;
   display: flex;
-  justify-content: space-between;
   gap: var(--spacing-xs);
 }
 .bills-list__date .paid-icon,
@@ -1184,11 +1182,15 @@ main#pots .title-row {
   }
   .bills-list__item {
     gap: var(--spacing-xxl);
-    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-columns: 4fr 1fr 2fr;
     justify-items: start;
   }
   .bills-list__date, .bills-list__value-and-date {
     grid-row: 1;
+  }
+  .bills-list__date {
+    justify-content: space-between;
+    justify-self: stretch;
   }
   .bills-list__image-and-title {
     grid-column: 1;
