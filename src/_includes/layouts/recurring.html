@@ -4,32 +4,35 @@
     <div class="container">
       <h1>{{ title }}</h1>
       <div class="card-container">
-        <div class="card dark-bg">
-          <div class="icon">{% include "svgs/icon-recurring-bills.svg" %}</div>
-          <div class="content">
-            <h3>Total bills</h3>
-            <p class="large-text">$384.98</p>
+        <div class="summary-cards">
+          <div class="card dark-bg">
+            <div class="icon">
+              {% include "svgs/icon-recurring-bills.svg" %}
+            </div>
+            <div class="content">
+              <h3>Total bills</h3>
+              <p class="large-text">$384.98</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Summary</h2>
+            <div class="row">
+              <p class="light-text">Paid Bills</p>
+              <p>2 ({{ '320' | int | amount }})</p>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+              <p class="light-text">Total Upcoming</p>
+              <p>6 ({{ '1230' | int | amount }})</p>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+              <p class="light-text red-text">Due Soon</p>
+              <p class="red-text">2 ({{ '320' | int | amount }})</p>
+            </div>
           </div>
         </div>
-
-        <div class="card">
-          <h2>Summary</h2>
-          <div class="row">
-            <p class="light-text">Paid Bills</p>
-            <p>2 ({{ '320' | int | amount }})</p>
-          </div>
-          <div class="divider"></div>
-          <div class="row">
-            <p class="light-text">Total Upcoming</p>
-            <p>6 ({{ '1230' | int | amount }})</p>
-          </div>
-          <div class="divider"></div>
-          <div class="row">
-            <p class="light-text red-text">Due Soon</p>
-            <p class="red-text">2 ({{ '320' | int | amount }})</p>
-          </div>
-        </div>
-
         <div class="card bills-card">
           <div class="input-row">
             <!-- TODO: make search functional -->

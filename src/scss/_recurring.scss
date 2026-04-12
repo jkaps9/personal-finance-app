@@ -18,15 +18,28 @@
   gap: var(--spacing-xl);
 }
 
+.summary-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
 .bills-list__headers,
 .bills-list__divider.first-divider {
   display: none;
 }
 
+// TODO: align headers with content
+// TODO: style due dates
+
 @media (min-width: 48rem) {
   .bills-list__headers,
   .bills-list__divider.first-divider {
     display: grid;
+  }
+  .summary-cards {
+    flex-direction: row;
+    grid-column: 1 / -1;
   }
 
   .bills-list {
@@ -53,6 +66,25 @@
 
     .bills-card {
       grid-column: 1 / -1;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .recurring-bills .card-container {
+    grid-template-columns: 1fr 2fr;
+    .summary-cards {
+      justify-content: flex-start;
+      flex-direction: column;
+      grid-column: 1 / 1;
+
+      & > * {
+        flex-grow: 0;
+      }
+    }
+    .bills-card {
+      grid-column: 2 / span 1;
+      grid-row: 1;
     }
   }
 }
