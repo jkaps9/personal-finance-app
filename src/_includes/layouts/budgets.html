@@ -1,11 +1,13 @@
 {% extends "layouts/base.html" %}
 {% block content %}
+  <section class="title-row">
+    <div class="container row">
+      <h1>{{ title }}</h1>
+      <button class="btn btn--primary">+ Add New Budget</button>
+    </div>
+  </section>
   <section class="budget-summary">
     <div class="container">
-      <div class="row title-row">
-        <h1>{{ title }}</h1>
-        <button class="btn btn--primary">+ Add New Budget</button>
-      </div>
       <div class="card">
         <div class="budgets-container">
           <div class="chart">
@@ -91,6 +93,24 @@
               class="budget__bar__spent"
               style="width: {{ 100 * (25 / budget.maximum | int) }}%; background-color:{{ budget.theme }};"
             ></div>
+          </div>
+          <div class="row budget__spent-remaining">
+            <div
+              class="budget"
+              style="border-color:{{ budget.theme }};"
+            >
+              <p class="light-text">Spent</p>
+              <!-- TODO: get spent amount -->
+              <p>$25.00</p>
+            </div>
+            <div
+              class="budget"
+              style="border-color:#f8f4f0;"
+            >
+              <p class="light-text">Remaining</p>
+              <!-- TODO: get spent amount and calc remaining -->
+              <p>$25.00</p>
+            </div>
           </div>
         </div>
       {% endfor %}

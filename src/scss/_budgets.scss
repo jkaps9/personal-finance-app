@@ -48,11 +48,30 @@
       bottom: var(--spacing-xxs);
     }
   }
+
+  .budget__spent-remaining {
+    justify-content: flex-start;
+
+    & > * {
+      flex: 1;
+    }
+  }
 }
 
 @media (min-width: 64rem) {
   main#budgets {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xxl) var(--spacing-lg);
+
+    .title-row {
+      grid-column: 1 / -1;
+    }
+
+    .budget-summary {
+      .card {
+        margin: 0;
+      }
+    }
   }
 }
