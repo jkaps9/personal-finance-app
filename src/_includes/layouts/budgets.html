@@ -124,7 +124,8 @@
               </a>
             </div>
             <ul class="transaction-list">
-              {% for transaction in collections.transactions | categoryFilter(budget.category) %}
+              {% set transactionArr = collections.transactions | categoryFilter(budget.category) %}
+              {% for transaction in transactionArr.slice(0, 3) %}
                 <li class="transaction-list__item">
                   <div class="transaction-list__image-and-title">
                     <div class="transaction-list__image">
