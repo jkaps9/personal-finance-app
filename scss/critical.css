@@ -604,42 +604,51 @@ main#overview .right {
   gap: var(--spacing-xxl);
 }
 
-.transaction-list {
+.transaction-list,
+.bills-list {
   display: grid;
   gap: var(--spacing-lg);
 }
-.transaction-list__image {
+.transaction-list__image,
+.bills-list__image {
   border-radius: 100vh;
   max-height: 2rem;
   max-width: 2rem;
   overflow: hidden;
 }
-.transaction-list__item {
+.transaction-list__item,
+.bills-list__item {
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
-.transaction-list__image-and-title {
+.transaction-list__image-and-title,
+.bills-list__image-and-title {
   align-items: center;
   display: flex;
   gap: var(--spacing-md);
 }
-.transaction-list__image-and-title p {
+.transaction-list__image-and-title p,
+.bills-list__image-and-title p {
   font-weight: 700;
 }
-.transaction-list__value-and-date {
+.transaction-list__value-and-date,
+.bills-list__value-and-date {
   align-items: flex-end;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
 }
-.transaction-list__value-and-date .value {
+.transaction-list__value-and-date .value,
+.bills-list__value-and-date .value {
   font-weight: 700;
 }
-.transaction-list__value-and-date .value.positive {
+.transaction-list__value-and-date .value.positive,
+.bills-list__value-and-date .value.positive {
   color: #277c78;
 }
-.transaction-list__value-and-date .date {
+.transaction-list__value-and-date .date,
+.bills-list__value-and-date .date {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.5;
@@ -872,9 +881,11 @@ input {
   padding: var(--spacing-sm) var(--spacing-lg);
 }
 
-.transactions h1 {
+.transactions h1,
+.recurring-bills h1 {
   margin-bottom: var(--spacing-xxl);
 }
+
 .transactions .card {
   gap: var(--spacing-xl);
 }
@@ -1102,5 +1113,75 @@ main#pots .title-row {
     align-items: stretch;
     flex-direction: column;
     gap: var(--spacing-xxl);
+  }
+}
+.bills-list__item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: var(--spacing-xs);
+}
+.bills-list__date, .bills-list__value-and-date {
+  grid-row: 2;
+}
+
+.bills-card {
+  gap: var(--spacing-xl);
+}
+
+.summary-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.bills-list__headers,
+.bills-list__divider.first-divider {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .bills-list__headers,
+  .bills-list__divider.first-divider {
+    display: grid;
+  }
+  .summary-cards {
+    flex-direction: row;
+    grid-column: 1/-1;
+  }
+  .bills-list__item {
+    gap: var(--spacing-xxl);
+    grid-template-columns: 1fr auto auto;
+    justify-items: start;
+  }
+  .bills-list__date, .bills-list__value-and-date {
+    grid-row: 1;
+  }
+  .bills-list__image-and-title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .recurring-bills .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .recurring-bills .card-container .bills-card {
+    grid-column: 1/-1;
+  }
+}
+@media (min-width: 64rem) {
+  .recurring-bills .card-container {
+    grid-template-columns: 1fr 2fr;
+  }
+  .recurring-bills .card-container .summary-cards {
+    justify-content: flex-start;
+    flex-direction: column;
+    grid-column: 1/1;
+  }
+  .recurring-bills .card-container .summary-cards > * {
+    flex-grow: 0;
+  }
+  .recurring-bills .card-container .bills-card {
+    grid-column: 2/span 1;
+    grid-row: 1;
   }
 }
