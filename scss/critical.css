@@ -176,6 +176,7 @@ table {
   background: none;
   border: none;
   color: #696868;
+  cursor: pointer;
   display: inline-flex;
   gap: var(--spacing-sm);
   text-decoration: none;
