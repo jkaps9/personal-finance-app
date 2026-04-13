@@ -78,7 +78,7 @@
               <p class="bills-list__header">Due Date</p>
               <p class="bills-list__header right-align">Amount</p>
             </li>
-            <li class="bills-list__divider first-divider"></li>
+            <li class="bills-list__divider divider first-divider"></li>
 
             {% for transaction in collections.recurring | selectattr("recurring") %}
               <li class="bills-list__item">
@@ -115,7 +115,7 @@
                 </div>
               </li>
               {% if not loop.last %}
-                <li class="bills-list__divider divider"></li>
+                <li class="bills-list__divider divider divider"></li>
               {% endif %}
             {% endfor %}
           </ul>

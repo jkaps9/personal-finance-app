@@ -85,7 +85,7 @@
             <p class="transaction-list__header">Transction Date</p>
             <p class="transaction-list__header">Amount</p>
           </li>
-          <li class="transaction-list__divider first-divider"></li>
+          <li class="transaction-list__divider divider first-divider"></li>
           {% for transaction in collections.transactions.slice(0, 10) %}
             <li class="transaction-list__item">
               <div class="transaction-list__image-and-title">
@@ -120,7 +120,7 @@
               </div>
             </li>
             {% if not loop.last %}
-              <li class="transaction-list__divider divider"></li>
+              <li class="transaction-list__divider divider divider"></li>
             {% endif %}
           {% endfor %}
         </ul>
