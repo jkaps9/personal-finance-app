@@ -88,10 +88,13 @@
           </div>
           <p class="light-text">Maximum of {{ budget.maximum | amount }}</p>
           <!-- TODO: set/calculate spending amount -->
+          {% set total = collections.transactions | sumByCategory(budget.category) %}
+          {% set percentage = 100 * (total / budget.maximum | int) %}
+          {% set width = percentage if percentage < 100 else 100 %}
           <div class="budget__bar">
             <div
               class="budget__bar__spent"
-              style="width: {{ 100 * (25 / budget.maximum | int) }}%; background-color:{{ budget.theme }};"
+              style="width: {{ width }}%; background-color:{{ budget.theme }};"
             ></div>
           </div>
           <div class="row budget__spent-remaining">
@@ -101,7 +104,7 @@
             >
               <p class="light-text">Spent</p>
               <!-- TODO: get spent amount -->
-              <p>$25.00</p>
+              <p>${{ total | amountWithDecimals(2) }}</p>
             </div>
             <div
               class="budget"
@@ -109,7 +112,9 @@
             >
               <p class="light-text">Remaining</p>
               <!-- TODO: get spent amount and calc remaining -->
-              <p>$25.00</p>
+              {% set remainder = budget.maximum - total %}
+              {% set remaining = remainder if budget.maximum > total else 0 %}
+              <p>${{ remaining | amountWithDecimals(2) }}</p>
             </div>
           </div>
           <div class="card budget__transactions">

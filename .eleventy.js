@@ -140,6 +140,14 @@ export default function (config) {
     return collection.filter((item) => item.category === category);
   });
 
+  config.addFilter("sumByCategory", function (collection, category) {
+    return collection
+      .filter((item) => item.category === category)
+      .reduce((accumulator, item) => {
+        return accumulator + (-1 * item.amount || 0);
+      }, 0);
+  });
+
   return {
     pathPrefix:
       process.env.NODE_ENV === "production" ? "/personal-finance-app/" : "/",
