@@ -51,14 +51,15 @@
     height: var(--spacing-xxl);
     margin: calc(-1 * var(--spacing-xxs)) 0;
     position: relative;
+    padding: var(--spacing-xxs);
+    z-index: 1;
 
     &__spent,
     &__saved {
       border-radius: var(--spacing-xxs);
-      position: absolute;
-      top: var(--spacing-xxs);
-      left: var(--spacing-xxs);
-      bottom: var(--spacing-xxs);
+      height: calc(var(--spacing-xxl) - var(--spacing-xxs) * 2);
+      position: relative;
+      z-index: 2;
     }
   }
 
