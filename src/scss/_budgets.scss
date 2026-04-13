@@ -66,10 +66,9 @@
   .pot__bar {
     height: var(--spacing-xs);
     margin: calc(-1 * var(--spacing-md)) 0 var(--spacing-sm);
+    padding: 0;
     &__saved {
-      top: 0;
-      left: 0;
-      bottom: 0;
+      height: var(--spacing-xs);
     }
 
     & + .row > .percentage {
