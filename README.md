@@ -61,7 +61,7 @@ Users should be able to:
 - Mobile-first workflow
 - [11ty](https://11ty.dev) - Static Site Generator
 - [sass](https://sass-lang.com/) - CSS Preprocessor
-- [Chart.js] (https://www.chartjs.org/) - JavaScript charting library
+- [Chart.js](https://www.chartjs.org/) - JavaScript charting library
 
 ## Author
 
