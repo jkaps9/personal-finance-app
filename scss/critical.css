@@ -1050,12 +1050,11 @@ input {
 .pots-cards .pot__bar {
   height: var(--spacing-xs);
   margin: calc(-1 * var(--spacing-md)) 0 var(--spacing-sm);
+  padding: 0;
 }
 .budget-cards .pot__bar__saved,
 .pots-cards .pot__bar__saved {
-  top: 0;
-  left: 0;
-  bottom: 0;
+  height: var(--spacing-xs);
 }
 .budget-cards .pot__bar + .row > .percentage,
 .pots-cards .pot__bar + .row > .percentage {
