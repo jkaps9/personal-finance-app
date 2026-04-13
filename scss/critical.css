@@ -1031,6 +1031,8 @@ input {
   height: var(--spacing-xxl);
   margin: calc(-1 * var(--spacing-xxs)) 0;
   position: relative;
+  padding: var(--spacing-xxs);
+  z-index: 1;
 }
 .budget-cards .budget__bar__spent, .budget-cards .budget__bar__saved,
 .budget-cards .pot__bar__spent,
@@ -1040,10 +1042,9 @@ input {
 .pots-cards .pot__bar__spent,
 .pots-cards .pot__bar__saved {
   border-radius: var(--spacing-xxs);
-  position: absolute;
-  top: var(--spacing-xxs);
-  left: var(--spacing-xxs);
-  bottom: var(--spacing-xxs);
+  height: calc(var(--spacing-xxl) - var(--spacing-xxs) * 2);
+  position: relative;
+  z-index: 2;
 }
 .budget-cards .pot__bar,
 .pots-cards .pot__bar {
