@@ -130,7 +130,8 @@
             id="previous"
             class="btn btn--pagination"
           >
-            {% include "svgs/icon-caret-left.svg" %} Prev
+            {% include "svgs/icon-caret-left.svg" %}
+            <span class="hide-on-mobile">Prev</span>
           </button>
           <div class="page-buttons">
             {% set pageCount = collections.transactions.length/10 %}
@@ -151,7 +152,8 @@
             id="next"
             class="btn btn--pagination"
           >
-            Next {% include "svgs/icon-caret-right.svg" %}
+            <span class="hide-on-mobile">Next</span>
+            {% include "svgs/icon-caret-right.svg" %}
           </button>
         </div>
       </div>
